@@ -1,0 +1,262 @@
+main {
+    .designBanner {
+        height: fit-content;
+        padding-bottom: 80px;
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+
+            .designBannerLeft {
+                width: 55%;
+                padding-right: 20px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .designBannerRight {
+                width: 45%;
+                padding-left: 25px;
+
+                h1 {
+                    font-size: 45px;
+                    margin-bottom: 30px;
+                    line-height: 65px;
+                }
+
+                p {
+                    margin-bottom: 25px;
+                }
+
+                button {
+                    background-color: #002E6E;
+                    padding: 12px 25px;
+                }
+            }
+        }
+    }
+
+    .designPack {
+        padding: 70px 0;
+
+        .container {
+            h2 {
+                width: 100%;
+                max-width: 900px;
+                font-size: 45px;
+                font-weight: 700;
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: 60px;
+            }
+
+            .singleDesignPack {
+                display: flex;
+                align-items: center;
+                padding: 25px 25px;
+                margin-bottom: 40px;
+                border-radius: 10px;
+                background-color: rgba(76, 96, 246, 0.06);
+
+                .designPackText {
+                    width: 50%;
+                    padding-right: 20px;
+
+                    h3 {
+                        font-size: 40px;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        font-size: 17px;
+                        font-weight: 400;
+                        line-height: 30px;
+                    }
+                }
+
+                .designPackImg {
+                    width: 50%;
+                    padding-left: 25px;
+
+                    img {
+                        width: 100%;
+                        max-height: 500px;
+                        object-fit: contain;
+                    }
+                }
+
+                &.singleDesignPackAlt {
+                    .designPackText {
+                        padding-right: 0;
+                        padding-left: 20px;
+                    }
+
+                    .designPackImg {
+                        padding-left: 0;
+                        padding-right: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .designDis {
+        padding: 60px 0;
+        background-color: rgba(224, 221, 235, 0.262745098);
+        margin-bottom: 80px;
+
+        .container {
+            .designDisText {
+                width: 100%;
+                max-width: 1000px;
+                text-align: center;
+                margin: 0 auto;
+
+                h2 {
+                    font-size: 40px;
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    margin-bottom: 40px;
+                }
+
+                button {
+                    width: fit-content;
+                    padding: 20px 30px;
+                    border: none;
+                    background-color: #002E6E;
+                    color: #fff;
+                    outline: none;
+                    font-size: 18px;
+                    font-weight: 600;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1250px) {
+    main {
+        .designBanner {
+            padding: 70px 0;
+            padding-top: 20px;
+
+            .container {
+                flex-direction: column;
+
+                .designBannerLeft {
+                    width: 520px;
+                    padding-right: 0;
+
+                    h1 {
+                        font-size: 40px;
+                        line-height: 60px;
+                    }
+
+                    button {
+                        padding: 15px;
+                    }
+                }
+
+                .designBannerRight {
+                    width: 100%;
+                    max-width: 90%;
+                    padding-left: 0;
+                }
+            }
+        }
+
+        .designPack {
+            .container {
+                h2 {
+                    font-size: 40px;
+                    margin-bottom: 50px;
+                }
+
+                .singleDesignPack {
+                    .designPackText {
+                        h3 {
+                            font-size: 35px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .designDis {
+            .container {
+                .designDisText {
+                    h2 {
+                        font-size: 35px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+
+                    button {
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media (max-width: 900px) {
+    main {
+        .designPack {
+            .container {
+                .singleDesignPack {
+                    flex-direction: column-reverse;
+
+                    .designPackText {
+                        width: 100%;
+                        padding-right: 0;
+                    }
+
+                    .designPackImg {
+                        width: 100%;
+                        padding-left: 0;
+                    }
+
+                    &.singleDesignPackAlt {
+                        flex-direction: column;
+
+                        .designPackText {
+                            padding-left: 0;
+                        }
+
+                        .designPackImg {
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

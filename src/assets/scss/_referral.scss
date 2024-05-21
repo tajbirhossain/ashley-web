@@ -1,0 +1,317 @@
+main {
+    .referralBanner {
+        height: fit-content;
+        padding-bottom: 170px;
+        padding-top: 170px;
+        background-image: linear-gradient(to right, rgb(255 255 255) 7%, rgba(255, 255, 255, 0) 75%), url(../images/introduce.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+
+            .referralBannerLeft {
+                width: 45%;
+                padding-right: 25px;
+
+                h1 {
+                    font-size: 45px;
+                    margin-bottom: 30px;
+                    line-height: 65px;
+                }
+
+                p {
+                    font-weight: 600;
+                    margin-bottom: 25px;
+                    color: #002E6E;
+                }
+
+                button {
+                    background-color: #002E6E;
+                    padding: 12px 25px;
+                }
+            }
+
+            // .referralBannerRight {
+            //     width: 55%;
+            //     padding-left: 20px;
+
+            //     img {
+            //         width: 100%;
+            //     }
+            // }
+        }
+    }
+
+    .promotion {
+        padding: 130px 0;
+
+        .container {
+            .promoHeading {
+                width: 100%;
+                max-width: 900px;
+                margin: 0 auto;
+                margin-bottom: 70px;
+                text-align: center;
+
+                h2 {
+                    font-size: 45px;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 30px;
+                }
+            }
+
+            .promoWrap {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                .singlePromo {
+                    width: 350px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    margin: 15px;
+
+                    img {
+                        width: 70px;
+                        margin-bottom: 15px;
+                    }
+
+                    h3 {
+                        font-size: 25px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .subRefer {
+        padding: 100px 0;
+
+        .container {
+            .subHeading {
+                width: 100%;
+                max-width: 900px;
+                margin: 0 auto;
+                margin-bottom: 70px;
+                text-align: center;
+
+                h2 {
+                    font-size: 45px;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 30px;
+                }
+            }
+
+            form {
+                padding: 40px 25px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 15px -3px #ccc;
+                position: relative;
+                background-color: #fff;
+
+                &::before {
+                    width: calc(100% - 50px);
+                    height: 150px;
+                    background-color: rgba(76, 96, 246, 0.0666666667);
+                    border-radius: 10px;
+                    content: "";
+                    position: absolute;
+                    top: -25px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: -1;
+                }
+
+                .subInpRow {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 15px;
+
+                    input {
+                        width: calc(50% - 7px);
+                        height: 49px;
+                        border: 1px solid #4C60F6;
+                        border-radius: 6px;
+                        outline: none;
+                        font-size: 16px;
+                        padding: 0 15px;
+
+                        &.singleInp {
+                            width: 100%;
+                        }
+                    }
+
+                    label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    textarea {
+                        width: 100%;
+                        max-width: 100%;
+                        min-width: 100%;
+                        height: 150px;
+                        padding: 15px;
+                        border: 1px solid #4C60F6;
+                        border-radius: 6px;
+                        font-size: 16px;
+                        outline: none;
+                    }
+
+                    &.addInpRow {
+                        margin-top: 50px;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                }
+
+                button {
+                    width: 190px;
+                    height: 55px;
+                    background-color: #4C60F6;
+                    color: #fff;
+                    font-size: 16px;
+                    font-weight: 500;
+                    border: none;
+                    border-radius: 6px;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+@media (max-width: 1250px) {
+    main {
+        .referralBanner {
+            padding-top: 140px;
+            padding-bottom: 140px;
+
+            .container {
+                flex-direction: column;
+
+                .referralBannerLeft {
+                    width: 100%;
+                    padding-right: 0;
+
+                    h1 {
+                        font-size: 40px;
+                        line-height: 60px;
+                    }
+                }
+            }
+        }
+
+        .promotion {
+            padding: 80px 0;
+
+            .container {
+                .promoHeading {
+                    h2 {
+                        font-size: 40px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .subRefer {
+            padding: 80px 0;
+
+            .container {
+                .subHeading {
+                    h2 {
+                        font-size: 40px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    main {
+        .subRefer {
+            .container {
+                form {
+                    padding: 35px 15px;
+
+                    .subInpRow {
+                        input {
+                            padding: 0 5px;
+                            font-size: 13px;
+                        }
+
+                        textarea {
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    main {
+        .referralBanner {
+            background-image: linear-gradient(to right, rgb(255 255 255) 11%, rgba(255, 255, 255, 0) 100%), url(../images/introduce.jpg);
+        }
+
+        .subRefer {
+            .container {
+                form {
+                    padding: 30px 10px;
+
+                    .subInpRow {
+                        flex-direction: column;
+
+                        input {
+                            width: 100%;
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

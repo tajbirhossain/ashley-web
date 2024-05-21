@@ -1,0 +1,5218 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 0px 0px 22px -6px #ccc;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container .logo {
+  width: 140px;
+  position: relative;
+}
+header .container .logo img {
+  width: 100%;
+}
+header .container .headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+header .container .headerRight .overlay {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.168627451);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+header .container .headerRight ul {
+  display: flex;
+  align-items: center;
+}
+header .container .headerRight ul li {
+  margin-left: 15px;
+  position: relative;
+}
+header .container .headerRight ul li a {
+  color: #002E6E;
+  display: block;
+  padding: 30px 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+header .container .headerRight ul li ul {
+  width: 300px;
+  position: absolute;
+  top: 79px;
+  left: 0;
+  background-color: #fff;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  max-height: calc(95vh - 79px);
+  overflow-y: auto;
+  overflow-x: clip;
+  box-shadow: 0px 6px 11px -1px #ccc;
+}
+header .container .headerRight ul li ul li {
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+header .container .headerRight ul li ul li.active::after {
+  width: calc(100% - 20px);
+  height: 2px;
+  background-color: #002E6E;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+header .container .headerRight ul li ul li a {
+  width: 100%;
+  padding: 20px 10px;
+}
+header .container .headerRight ul li:hover ul {
+  opacity: 1;
+  pointer-events: all;
+}
+header .container .headerRight button {
+  border: none;
+  outline: none;
+  padding: 13px 20px;
+  background-color: rgba(255, 255, 0, 0);
+  border: 1.5px solid #000;
+  color: #002E6E;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 15px;
+  border-radius: 7px;
+}
+header .container .headerRight button:last-child {
+  background-color: #4C60F6;
+  border: 1.5px solid #4C60F6;
+  color: #fff;
+}
+header .container .headerRight button br {
+  display: none;
+}
+header .container .headerRight .fa-bars {
+  display: none;
+}
+
+@media (max-width: 1350px) {
+  header .container .headerRight ul li {
+    margin-left: 8px;
+  }
+  header .container .headerRight button {
+    margin-left: 8px;
+  }
+}
+@media (max-width: 1250px) {
+  header {
+    padding: 20px 0;
+  }
+  header .container .headerRight .overlay {
+    display: block;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  header .container .headerRight .overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+  header .container .headerRight ul {
+    width: 280px;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    z-index: 100;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 20px;
+    transition: 0.3s;
+  }
+  header .container .headerRight ul.active {
+    left: 0;
+  }
+  header .container .headerRight ul li {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  header .container .headerRight ul li a {
+    width: 100%;
+    padding: 10px 15px;
+  }
+  header .container .headerRight ul li ul {
+    width: 300px;
+    top: 35px;
+    padding: 30px 20px;
+  }
+  header .container .headerRight .fa-bars {
+    display: block;
+    font-size: 30px;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 900px) {
+  header .container .logo {
+    width: 90px;
+  }
+  header .container .headerRight button {
+    padding: 8px;
+  }
+  header .container .headerRight .fa-bars {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 650px) {
+  header .container .logo {
+    width: 90px;
+  }
+  header .container .headerRight button {
+    width: 90px;
+    padding: 6px 0;
+    font-size: 11px;
+  }
+  header .container .headerRight .fa-bars {
+    margin-left: 15px;
+    font-size: 20px;
+  }
+}
+footer {
+  background-color: #242329;
+}
+footer .container .footerTop {
+  display: flex;
+  align-items: flex-start;
+  padding: 50px 0;
+  border-bottom: 1.5px solid #4b485a;
+}
+footer .container .footerTop .footerItem {
+  width: 25%;
+  padding-right: 30px;
+  color: #e9eef2;
+}
+footer .container .footerTop .footerItem p {
+  font-size: 17px;
+  line-height: 24px;
+}
+footer .container .footerTop .footerItem h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+footer .container .footerTop .footerItem ul li {
+  margin-bottom: 7px;
+  color: rgba(233, 238, 242, 0.9176470588);
+}
+footer .container .footerTop .footerItem.followItem ul {
+  display: flex;
+  align-items: center;
+}
+footer .container .footerTop .footerItem.followItem ul li {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid #e9eef2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+footer .container .footerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+footer .container .footerBottom p {
+  text-align: center;
+  color: rgba(159, 171, 181, 0.9176470588);
+}
+
+@media (max-width: 1250px) {
+  footer .container .footerTop {
+    flex-wrap: wrap;
+  }
+  footer .container .footerTop .footerItem {
+    width: 350px;
+    margin-bottom: 20px;
+  }
+}
+main {
+  overflow-x: hidden;
+  overflow-y: clip;
+}
+main .banner {
+  width: 100%;
+  height: 700px;
+  padding-top: 80px;
+  position: relative;
+}
+main .banner::before {
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  border: 150px solid rgba(224, 221, 235, 0.262745098);
+  content: "";
+  position: absolute;
+  top: -400px;
+  right: -350px;
+}
+main .banner .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+main .banner .container h1 {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+main .banner .container p {
+  max-width: 700px;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  line-height: 31px;
+}
+main .banner .container button {
+  width: fit-content;
+  padding: 20px 30px;
+  border: none;
+  background-color: #4C60F6;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+main .banner .container .manImg {
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+main .marketingServices {
+  padding: 50px 0;
+  margin-bottom: 80px;
+}
+main .marketingServices .container .marketingHeading {
+  margin-bottom: 50px;
+}
+main .marketingServices .container .marketingHeading h2 {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+main .marketingServices .container .marketingHeading p {
+  text-align: center;
+}
+main .marketingServices .container .marketingHeading p a {
+  color: #4C60F6;
+  font-weight: 500;
+}
+main .marketingServices .container .marketingWrap .singleMarketing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 40px;
+  border-radius: 250px;
+  background: linear-gradient(90deg, rgb(255, 255, 255) 13%, rgb(242, 241, 251) 100%);
+  margin-bottom: 35px;
+}
+main .marketingServices .container .marketingWrap .singleMarketing.singleMarketingAlt {
+  background: linear-gradient(90deg, rgb(242, 241, 251) 13%, rgb(255, 255, 255) 100%);
+}
+main .marketingServices .container .marketingWrap .singleMarketing.singleMarketingAlt .marketingText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+main .marketingServices .container .marketingWrap .singleMarketing .marketingText {
+  width: 55%;
+}
+main .marketingServices .container .marketingWrap .singleMarketing .marketingText h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+main .marketingServices .container .marketingWrap .singleMarketing .marketingText ul {
+  margin-bottom: 35px;
+}
+main .marketingServices .container .marketingWrap .singleMarketing .marketingText ul li {
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 13px;
+}
+main .marketingServices .container .marketingWrap .singleMarketing .marketingText ul li::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #002E6E;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+main .marketingServices .container .marketingWrap .singleMarketing .marketingText ul li a {
+  color: #002E6E;
+  font-size: 18px;
+  font-weight: 500;
+}
+main .marketingServices .container .marketingWrap .singleMarketing .marketingText button {
+  width: 155px;
+  height: 50px;
+  border: none;
+  border-radius: 8px;
+  background-color: #002E6E;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+}
+main .marketingServices .container .marketingWrap .singleMarketing .marketingImg {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #002E6E;
+}
+main .marketingServices .container .marketingWrap .singleMarketing .marketingImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .highValue .container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+main .highValue .container .valueLeft {
+  width: 50%;
+  padding-right: 40px;
+}
+main .highValue .container .valueLeft h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+main .highValue .container .valueLeft p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 31px;
+}
+main .highValue .container .valueRight {
+  width: 50%;
+  height: fit-content;
+}
+main .highValue .container .valueRight img {
+  width: 100%;
+}
+main .subscribe .container .subForm {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px -5px #ccc;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  text-align: center;
+  position: relative;
+  background-color: #fff;
+}
+main .subscribe .container .subForm::before {
+  width: calc(100% - 50px);
+  height: 150px;
+  background-color: rgba(76, 96, 246, 0.0666666667);
+  border-radius: 10px;
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+main .subscribe .container .subForm h2 {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+main .subscribe .container .subForm span {
+  font-size: 17px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 30px;
+}
+main .subscribe .container .subForm input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  background-color: #f4f4f4;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  padding: 0 20px;
+}
+main .subscribe .container .subForm .termsCondition {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+main .subscribe .container .subForm .termsCondition input {
+  width: unset;
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+main .subscribe .container .subForm .termsCondition label {
+  font-size: 15px;
+  font-weight: 500;
+}
+main .subscribe .container .subForm .termsCondition label a {
+  color: #4C60F6;
+}
+main .subscribe .container .subForm button {
+  width: 100%;
+  max-width: 190px;
+  height: 48px;
+  background-color: #4C60F6;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+}
+
+@media (max-width: 1250px) {
+  main .banner {
+    padding: 150px 0;
+    height: fit-content;
+  }
+  main .banner::before {
+    width: 600px;
+    height: 600px;
+    border-width: 120px;
+  }
+  main .banner .container h1 {
+    font-size: 50px;
+  }
+  main .banner .container h1 br {
+    display: none;
+  }
+  main .banner .container p {
+    font-size: 16px;
+  }
+  main .banner .container button {
+    padding: 15px;
+  }
+  main .banner .container .manImg {
+    display: none;
+  }
+  main .marketingServices .container .marketingHeading h2 {
+    font-size: 42px;
+  }
+  main .marketingServices .container .marketingWrap .singleMarketing .marketingText h3 {
+    font-size: 25px;
+  }
+  main .marketingServices .container .marketingWrap .singleMarketing .marketingImg {
+    width: 250px;
+    height: 250px;
+    border-width: 4px;
+  }
+  main .highValue .container {
+    flex-direction: column;
+  }
+  main .highValue .container .valueLeft {
+    width: 100%;
+  }
+  main .highValue .container .valueLeft h2 {
+    font-size: 42px;
+  }
+  main .highValue .container .valueLeft p {
+    font-size: 16px;
+  }
+  main .highValue .container .valueRight {
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  main .banner {
+    padding: 50px 0;
+  }
+  main .marketingServices .container .marketingWrap .singleMarketing {
+    flex-direction: column-reverse;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 13%, rgb(242, 241, 251) 100%);
+    border-radius: 0;
+  }
+  main .marketingServices .container .marketingWrap .singleMarketing.singleMarketingAlt {
+    flex-direction: column;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 13%, rgb(242, 241, 251) 100%);
+  }
+  main .marketingServices .container .marketingWrap .singleMarketing.singleMarketingAlt .marketingText {
+    width: 100%;
+  }
+  main .marketingServices .container .marketingWrap .singleMarketing .marketingImg {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 15px;
+    border-radius: 0;
+    border-width: 2px;
+  }
+  main .marketingServices .container .marketingWrap .singleMarketing .marketingText {
+    width: 100%;
+  }
+  main .marketingServices .container .marketingWrap .singleMarketing .marketingText .marketingTextInner {
+    width: 100%;
+  }
+}
+main .aboutBanner {
+  padding: 60px 0;
+  margin-bottom: 70px;
+}
+main .aboutBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .aboutBanner .container .aboutBannerLeft {
+  width: 50%;
+  padding-right: 20px;
+}
+main .aboutBanner .container .aboutBannerLeft img {
+  width: 100%;
+}
+main .aboutBanner .container .aboutBannerRight {
+  width: 50%;
+  padding-left: 25px;
+}
+main .aboutBanner .container .aboutBannerRight h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  line-height: 65px;
+}
+main .aboutBanner .container .aboutBannerRight p {
+  margin-bottom: 25px;
+}
+main .mission {
+  padding: 120px 0;
+  background-image: url(../images/abstract-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .mission .container h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: #fff;
+}
+main .mission .container .missionWrap {
+  display: flex;
+  align-items: center;
+}
+main .mission .container .missionWrap .missionLeft {
+  width: 50%;
+  color: #fff;
+  padding-right: 20px;
+}
+main .mission .container .missionWrap .missionLeft h3 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+main .mission .container .missionWrap .missionLeft p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+main .mission .container .missionWrap .missionRight {
+  width: 50%;
+  padding-left: 20px;
+}
+main .mission .container .missionWrap .missionRight img {
+  width: 100%;
+}
+main .vision {
+  padding: 120px 0;
+}
+main .vision .container h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+main .vision .container .visionWrap {
+  display: flex;
+  align-items: center;
+}
+main .vision .container .visionWrap .visionLeft {
+  width: 50%;
+  padding-right: 20px;
+}
+main .vision .container .visionWrap .visionLeft img {
+  width: 100%;
+}
+main .vision .container .visionWrap .visionRight {
+  width: 50%;
+  padding-left: 20px;
+}
+main .vision .container .visionWrap .visionRight h3 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+main .vision .container .visionWrap .visionRight p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+main .comValue {
+  padding: 60px 0;
+  padding-top: 0;
+}
+main .comValue .container h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+main .comValue .container .comValueWrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main .comValue .container .comValueWrap .singleComValue {
+  width: calc(33.3333333333% - 15px);
+  height: 300px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 1px 1px 14px -4px #ccc;
+  margin-bottom: 30px;
+}
+main .comValue .container .comValueWrap .singleComValue img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+main .comValue .container .comValueWrap .singleComValue h3 {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+main .whyChoose {
+  padding: 60px 0;
+  background-image: url(../images/gradient-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main .whyChoose .container h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: #fff;
+}
+main .whyChoose .container .whyChooseWrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .whyChoose .container .whyChooseWrap .singleWhyChoose {
+  width: calc(33.3333333333% - 15px);
+  height: 300px;
+  border-radius: 15px;
+  color: #d4d4d4;
+  text-align: center;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  margin: 7.5px;
+}
+main .whyChoose .container .whyChooseWrap .singleWhyChoose .whyChooseImg {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to right top, #3504c0, #3005c5, #2906c9, #2007ce, #1209d3);
+  box-shadow: inset -1px 1px 14px -10px #fff;
+}
+main .whyChoose .container .whyChooseWrap .singleWhyChoose .whyChooseImg img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  filter: invert(1);
+}
+main .whyChoose .container .whyChooseWrap .singleWhyChoose h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+main .aboutDis {
+  padding: 60px 0;
+  background-color: rgba(224, 221, 235, 0.262745098);
+}
+main .aboutDis .container .aboutDisText {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+main .aboutDis .container .aboutDisText h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main .aboutDis .container .aboutDisText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+main .aboutDis .container .aboutDisText button {
+  width: fit-content;
+  padding: 20px 30px;
+  border: none;
+  background-color: #002E6E;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+@media (max-width: 1250px) {
+  main .mission .container h2 {
+    font-size: 40px;
+  }
+  main .comValue .container h2 {
+    font-size: 40px;
+  }
+  main .comValue .container .comValueWrap .singleComValue {
+    width: calc(50% - 15px);
+  }
+  main .comValue .container .comValueWrap .singleComValue h3 {
+    font-size: 20px;
+  }
+  main .whyChoose .container h2 {
+    font-size: 40px;
+  }
+  main .whyChoose .container .whyChooseWrap .singleWhyChoose {
+    width: calc(50% - 15px);
+  }
+  main .aboutDis .container .aboutDisText h2 {
+    font-size: 35px;
+  }
+  main .aboutDis .container .aboutDisText p {
+    font-size: 16px;
+  }
+  main .aboutDis .container .aboutDisText button {
+    padding: 15px;
+  }
+}
+@media (max-width: 900px) {
+  main .aboutBanner .container {
+    flex-direction: column;
+  }
+  main .aboutBanner .container .aboutBannerLeft {
+    width: 520px;
+    max-width: 90%;
+    padding: 0;
+  }
+  main .aboutBanner .container .aboutBannerRight {
+    width: 100%;
+    padding: 0;
+  }
+  main .mission .container .missionWrap {
+    flex-direction: column;
+  }
+  main .mission .container .missionWrap .missionLeft {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  main .mission .container .missionWrap .missionLeft h3 {
+    font-size: 31px;
+  }
+  main .mission .container .missionWrap .missionRight {
+    width: 100%;
+    max-width: 520px;
+    padding: 0;
+  }
+  main .comValue .container .comValueWrap .singleComValue {
+    width: 100%;
+    height: fit-content;
+  }
+  main .vision .container .visionWrap {
+    flex-direction: column-reverse;
+  }
+  main .vision .container .visionWrap .visionLeft {
+    width: 100%;
+    max-width: 520px;
+    padding: 0;
+  }
+  main .vision .container .visionWrap .visionRight {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  main .whyChoose .container .whyChooseWrap .singleWhyChoose {
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+}
+main .contact {
+  padding: 60px 0;
+  margin-bottom: 70px;
+}
+main .contact .container .contactWrap {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 1px 1px 11px 0px #ccc;
+}
+main .contact .container .contactWrap .contactLeft {
+  width: 35%;
+  background-color: #041d39;
+  border-radius: 5px;
+  color: #fff;
+  padding: 30px;
+  position: relative;
+}
+main .contact .container .contactWrap .contactLeft h2 {
+  font-size: 27px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+main .contact .container .contactWrap .contactLeft p {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+main .contact .container .contactWrap .contactLeft .contactMail {
+  margin-bottom: 170px;
+}
+main .contact .container .contactWrap .contactLeft .contactMail small {
+  font-size: 15px;
+  font-weight: 500;
+  color: #bababa;
+  display: block;
+  margin-bottom: 7px;
+}
+main .contact .container .contactWrap .contactLeft .contactMail h3 {
+  font-size: 18px;
+  font-weight: 500;
+  word-break: break-all;
+}
+main .contact .container .contactWrap .contactLeft .contactSocial {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+}
+main .contact .container .contactWrap .contactLeft .contactSocial a {
+  margin-right: 20px;
+}
+main .contact .container .contactWrap .contactLeft .contactSocial a i {
+  font-size: 25px;
+}
+main .contact .container .contactWrap .contactRight {
+  width: 65%;
+  padding: 35px;
+}
+main .contact .container .contactWrap .contactRight .contactInpRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+main .contact .container .contactWrap .contactRight .contactInpRow.contactLastRow {
+  display: block;
+  padding: 0 10px;
+}
+main .contact .container .contactWrap .contactRight .contactInpRow.contactLastRow label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #909090;
+}
+main .contact .container .contactWrap .contactRight .contactInpRow.contactLastRow textarea {
+  width: 100%;
+  max-width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  border: 1px solid #e7e7e7;
+}
+main .contact .container .contactWrap .contactRight .contactInpRow .contactInpWrap {
+  width: 50%;
+  padding: 0 10px;
+}
+main .contact .container .contactWrap .contactRight .contactInpRow .contactInpWrap label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #909090;
+}
+main .contact .container .contactWrap .contactRight .contactInpRow .contactInpWrap input {
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid #e7e7e7;
+}
+main .contact .container .contactWrap .contactRight .termsCondition {
+  display: flex;
+  align-items: center;
+  margin: 35px 10px;
+}
+main .contact .container .contactWrap .contactRight .termsCondition input {
+  width: unset;
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+main .contact .container .contactWrap .contactRight .termsCondition label {
+  font-size: 15px;
+  font-weight: 500;
+}
+main .contact .container .contactWrap .contactRight .termsCondition label a {
+  color: #4C60F6;
+}
+main .contact .container .contactWrap .contactRight button {
+  font-size: 17px;
+  font-weight: 400;
+  padding: 15px 30px;
+  color: #fff;
+  background-color: #4C60F6;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+@media (max-width: 900px) {
+  main .contact .container .contactWrap {
+    flex-direction: column;
+  }
+  main .contact .container .contactWrap .contactLeft {
+    width: 100%;
+  }
+  main .contact .container .contactWrap .contactLeft .contactSocial {
+    bottom: 55px;
+  }
+  main .contact .container .contactWrap .contactRight {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  main .contact .container .contactWrap .contactRight {
+    padding: 30px 0;
+  }
+}
+main .login {
+  padding: 100px 0;
+}
+main .login .container .loginWrap {
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px -3px #ccc;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+}
+main .login .container .loginWrap::before {
+  width: calc(100% - 50px);
+  height: 150px;
+  background-color: rgba(76, 96, 246, 0.0666666667);
+  border-radius: 10px;
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+main .login .container .loginWrap .loginLeft {
+  width: 50%;
+  padding: 25px;
+}
+main .login .container .loginWrap .loginLeft .loginHeading {
+  margin-bottom: 60px;
+}
+main .login .container .loginWrap .loginLeft .loginHeading h1 {
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .login .container .loginWrap .loginLeft .loginHeading p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #434343;
+}
+main .login .container .loginWrap .loginLeft .loginWithGoggle {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  border-radius: 30px;
+  border: 1.5px solid #4C60F6;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+main .login .container .loginWrap .loginLeft .loginWithGoggle img {
+  margin-right: 15px;
+}
+main .login .container .loginWrap .loginLeft .loginInpWrap {
+  margin-bottom: 30px;
+}
+main .login .container .loginWrap .loginLeft .loginInpWrap label {
+  font-size: 17px;
+  font-weight: 600;
+  color: #5d5d5d;
+  display: block;
+  margin-bottom: 10px;
+}
+main .login .container .loginWrap .loginLeft .loginInpWrap input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #4C60F6;
+  border-radius: 6px;
+  outline: none;
+  font-size: 18px;
+  padding: 0 15px;
+}
+main .login .container .loginWrap .loginLeft .termsCondition {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+main .login .container .loginWrap .loginLeft .termsCondition input {
+  width: unset;
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+main .login .container .loginWrap .loginLeft .termsCondition label {
+  font-size: 15px;
+  font-weight: 500;
+}
+main .login .container .loginWrap .loginLeft .termsCondition label a {
+  color: #4C60F6;
+}
+main .login .container .loginWrap .loginLeft .loginBtn {
+  width: 100%;
+  max-width: 190px;
+  height: 48px;
+  background-color: #4C60F6;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+main .login .container .loginWrap .loginRight {
+  width: 50%;
+}
+main .login .container .loginWrap .loginRight img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .login .container .loginWrap .haveAccount {
+  font-size: 18px;
+  font-weight: 600;
+}
+main .login .container .loginWrap .haveAccount a {
+  color: #4C60F6;
+}
+
+@media (max-width: 900px) {
+  main .login .container .loginWrap {
+    flex-direction: column-reverse;
+  }
+  main .login .container .loginWrap .loginLeft {
+    width: 100%;
+  }
+  main .login .container .loginWrap .loginLeft .loginHeading h1 {
+    font-size: 60px;
+  }
+  main .login .container .loginWrap .loginRight {
+    width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  main .login .container .loginWrap .loginLeft {
+    padding: 20px 10px;
+  }
+}
+main .affiliateBanner {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+main .affiliateBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .affiliateBanner .container .affiliateBannerLeft {
+  width: 50%;
+  padding-right: 20px;
+}
+main .affiliateBanner .container .affiliateBannerLeft img {
+  width: 100%;
+}
+main .affiliateBanner .container .affiliateBannerRight {
+  width: 50%;
+  padding-left: 25px;
+}
+main .affiliateBanner .container .affiliateBannerRight h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  line-height: 65px;
+}
+main .affiliateBanner .container .affiliateBannerRight p {
+  margin-bottom: 25px;
+}
+main .affiliateBanner .container .affiliateBannerRight ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+main .affiliateBanner .container .affiliateBannerRight ul li span:first-child {
+  width: 20px;
+  height: 20px;
+  background-color: #4C60F6;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-right: 15px;
+}
+main .affiliateBanner .container .affiliateBannerRight ul li span:first-child i {
+  font-size: 10px;
+  color: #fff;
+}
+main .affiliateBanner .container .affiliateBannerRight ul li span:last-child {
+  width: calc(100% - 35px);
+}
+main .growRapid {
+  padding: 60px 0;
+}
+main .growRapid .container .growHeading {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main .growRapid .container .growHeading h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .growRapid .container .growHeading p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .growRapid .container .growBoxWrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+}
+main .growRapid .container .growBoxWrap .growBox {
+  width: 330px;
+}
+main .growRapid .container .growBoxWrap .growBox .growImg {
+  width: 90%;
+  height: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+main .growRapid .container .growBoxWrap .growBox .growImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+main .growRapid .container .growBoxWrap .growBox .growText {
+  width: 100%;
+  text-align: center;
+}
+main .growRapid .container .growBoxWrap .growBox .growText h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+main .growRapid .container .growBoxWrap .growBox .growText p {
+  font-size: 15px;
+  line-height: 25px;
+}
+main .affiliateService {
+  padding: 70px 0;
+}
+main .affiliateService .container .singleAffiliateService {
+  display: flex;
+  align-items: center;
+  padding: 25px 25px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+}
+main .affiliateService .container .singleAffiliateService .affServiceText {
+  width: 50%;
+  padding-right: 20px;
+}
+main .affiliateService .container .singleAffiliateService .affServiceText h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main .affiliateService .container .singleAffiliateService .affServiceText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+main .affiliateService .container .singleAffiliateService .affServiceText ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  line-height: 25px;
+  font-size: 16px;
+}
+main .affiliateService .container .singleAffiliateService .affServiceText ul li span {
+  width: 19px;
+  height: 19px;
+  background-color: #4C60F6;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-right: 15px;
+}
+main .affiliateService .container .singleAffiliateService .affServiceText ul li span i {
+  font-size: 9px;
+  color: #fff;
+}
+main .affiliateService .container .singleAffiliateService .affServiceText ul li .affServicePara {
+  width: calc(100% - 34px);
+  height: unset;
+  background-color: unset;
+  border-radius: 0;
+  margin: 0;
+  display: unset;
+}
+main .affiliateService .container .singleAffiliateService .affServiceImg {
+  width: 50%;
+  padding-left: 25px;
+}
+main .affiliateService .container .singleAffiliateService .affServiceImg img {
+  width: 100%;
+}
+main .affiliateService .container .singleAffiliateService.singleAffiliateServiceAlt .affServiceText {
+  padding-right: 0;
+  padding-left: 20px;
+}
+main .affiliateService .container .singleAffiliateService.singleAffiliateServiceAlt .affServiceImg {
+  padding-left: 0;
+  padding-right: 25px;
+}
+main .readyScale .container .scaleWrap {
+  position: relative;
+  padding: 60px 70px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  background-color: rgba(76, 96, 246, 0.09);
+}
+main .readyScale .container .scaleWrap::before {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgba(76, 96, 246, 0.2);
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: 100px;
+}
+main .readyScale .container .scaleWrap::after {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: rgba(0, 46, 110, 0.07);
+  content: "";
+  position: absolute;
+  bottom: -200px;
+  left: -70px;
+}
+main .readyScale .container .scaleWrap .scaleContent {
+  max-width: 75%;
+  position: relative;
+  z-index: 1;
+}
+main .readyScale .container .scaleWrap .scaleContent h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+main .readyScale .container .scaleWrap .scaleContent p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+main .readyScale .container .scaleWrap .scaleContent button {
+  width: fit-content;
+  padding: 20px 30px;
+  border: none;
+  background-color: #4C60F6;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+@media (max-width: 1250px) {
+  main .affiliateBanner {
+    padding: 70px 0;
+    padding-top: 20px;
+  }
+  main .affiliateBanner .container {
+    flex-direction: column;
+  }
+  main .affiliateBanner .container .affiliateBannerLeft {
+    width: 520px;
+    max-width: 90%;
+    padding: 0;
+  }
+  main .affiliateBanner .container .affiliateBannerRight {
+    width: 100%;
+    padding: 0;
+  }
+  main .affiliateBanner .container .affiliateBannerRight h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  main .growRapid .container .growHeading h2 {
+    font-size: 40px;
+  }
+  main .growRapid .container .growHeading p {
+    font-size: 16px;
+  }
+  main .growRapid .container .growBoxWrap .growBox .growText h3 {
+    font-size: 25px;
+  }
+  main .affiliateService .container .singleAffiliateService .affServiceText h3 {
+    font-size: 35px;
+  }
+  main .affiliateService .container .singleAffiliateService .affServiceText p {
+    font-size: 16px;
+  }
+  main .readyScale .container .scaleWrap .scaleContent h2 {
+    font-size: 35px;
+  }
+  main .readyScale .container .scaleWrap .scaleContent p {
+    font-size: 16px;
+  }
+  main .readyScale .container .scaleWrap .scaleContent button {
+    padding: 15px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 900px) {
+  main .affiliateService .container .singleAffiliateService {
+    flex-direction: column;
+  }
+  main .affiliateService .container .singleAffiliateService.singleAffiliateServiceAlt {
+    flex-direction: column-reverse;
+  }
+  main .affiliateService .container .singleAffiliateService.singleAffiliateServiceAlt .affServiceText {
+    width: 100%;
+    padding: 0;
+  }
+  main .affiliateService .container .singleAffiliateService.singleAffiliateServiceAlt .affServiceImg {
+    width: 100%;
+    padding: 0;
+  }
+  main .affiliateService .container .singleAffiliateService .affServiceText {
+    width: 100%;
+    padding: 0;
+  }
+  main .affiliateService .container .singleAffiliateService .affServiceImg {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 650px) {
+  main .growRapid .container .growBoxWrap {
+    flex-direction: column;
+  }
+  main .growRapid .container .growBoxWrap .growBox {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  main .readyScale .container .scaleWrap {
+    padding: 20px;
+  }
+  main .readyScale .container .scaleWrap .scaleContent {
+    max-width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  main .affiliateService .container .singleAffiliateService .affServiceText h3 {
+    font-size: 30px;
+  }
+}
+main .influencerBanner {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+main .influencerBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .influencerBanner .container .influencerBannerLeft {
+  width: 45%;
+  padding-right: 25px;
+}
+main .influencerBanner .container .influencerBannerLeft h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  line-height: 65px;
+}
+main .influencerBanner .container .influencerBannerLeft p {
+  margin-bottom: 25px;
+}
+main .influencerBanner .container .influencerBannerLeft button {
+  background-color: #002E6E;
+  padding: 12px 25px;
+}
+main .influencerBanner .container .influencerBannerRight {
+  width: 55%;
+  padding-left: 20px;
+}
+main .influencerBanner .container .influencerBannerRight img {
+  width: 100%;
+}
+main .signupExplore {
+  padding: 70px 0;
+}
+main .signupExplore .container .exploreWrapper {
+  padding: 80px 40px;
+  background-color: rgba(76, 96, 246, 0.09);
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+main .signupExplore .container .exploreWrapper::after {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: rgba(76, 96, 246, 0.5);
+  content: "";
+  position: absolute;
+  right: -250px;
+  bottom: -250px;
+}
+main .signupExplore .container .exploreWrapper h2 {
+  font-size: 55px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  line-height: 70px;
+  position: relative;
+  z-index: 1;
+}
+main .signupExplore .container .exploreWrapper h2 span {
+  font-weight: 300;
+}
+main .signupExplore .container .exploreWrapper h2 span span {
+  font-weight: 800;
+  color: #4C60F6;
+}
+main .signupExplore .container .exploreWrapper button {
+  padding: 15px 55px;
+  border-radius: 8px;
+  background-color: #002E6E;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+main .chooseUs {
+  padding: 80px 0;
+}
+main .chooseUs .container h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 100px;
+}
+main .chooseUs .container .chooseWrap .singleChoose {
+  display: flex;
+  align-items: center;
+  padding: 25px 25px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+}
+main .chooseUs .container .chooseWrap .singleChoose .chooseVid {
+  width: 53%;
+}
+main .chooseUs .container .chooseWrap .singleChoose .chooseVid .video-js {
+  width: 100%;
+  height: 380px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 24px 2px #ccc;
+}
+main .chooseUs .container .chooseWrap .singleChoose .chooseVid .video-js video {
+  border-radius: 10px;
+}
+main .chooseUs .container .chooseWrap .singleChoose .chooseVid img {
+  width: 100%;
+  max-height: 500px;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+main .chooseUs .container .chooseWrap .singleChoose .chooseText {
+  width: 47%;
+  padding-left: 45px;
+}
+main .chooseUs .container .chooseWrap .singleChoose .chooseText h3 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+main .chooseUs .container .chooseWrap .singleChoose .chooseText h3 span {
+  font-weight: 300;
+}
+main .chooseUs .container .chooseWrap .singleChoose .chooseText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 28px;
+}
+main .chooseUs .container .chooseWrap .singleChoose.singleChooseAlt .chooseText {
+  padding-left: 0;
+  padding-right: 45px;
+}
+main .getStart {
+  padding: 70px 0;
+  padding-top: 0;
+  position: relative;
+}
+main .getStart .startBlob1 {
+  width: 370px;
+  position: absolute;
+  left: 13px;
+  top: -62px;
+  pointer-events: none;
+  z-index: -1;
+}
+main .getStart .startBlob2 {
+  width: 370px;
+  position: absolute;
+  right: 13px;
+  bottom: 0px;
+  pointer-events: none;
+  rotate: -30deg;
+  z-index: -1;
+}
+main .getStart .container h2 {
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+main .getStart .container .getStartWrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+}
+main .getStart .container .getStartWrap .singleGetStart {
+  width: 300px;
+  max-width: 100%;
+}
+main .getStart .container .getStartWrap .singleGetStart .getStartImg {
+  width: 100%;
+  height: 250px;
+}
+main .getStart .container .getStartWrap .singleGetStart .getStartImg img {
+  width: 75%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+main .getStart .container .getStartWrap .singleGetStart .getStartText {
+  width: 100%;
+  padding: 20px 0;
+}
+main .getStart .container .getStartWrap .singleGetStart .getStartText h3 {
+  font-size: 30px;
+  text-align: center;
+}
+main .buildTeam {
+  padding: 70px 0;
+}
+main .buildTeam .container .buildTeamWrapper {
+  width: 100%;
+  padding: 60px 70px;
+  border-radius: 15px;
+  background-color: rgba(76, 96, 246, 0.09);
+  position: relative;
+  overflow: hidden;
+}
+main .buildTeam .container .buildTeamWrapper .teamBlob1 {
+  width: 300px;
+  position: absolute;
+  left: 50px;
+  bottom: -100px;
+}
+main .buildTeam .container .buildTeamWrapper .teamBlob2 {
+  width: 500px;
+  position: absolute;
+  right: 150px;
+  top: -140px;
+}
+main .buildTeam .container .buildTeamWrapper .buildTeamContent {
+  max-width: 75%;
+  position: relative;
+  z-index: 1;
+}
+main .buildTeam .container .buildTeamWrapper .buildTeamContent h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+main .buildTeam .container .buildTeamWrapper .buildTeamContent button {
+  width: fit-content;
+  padding: 20px 30px;
+  border: none;
+  background-color: #002E6E;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+@media (max-width: 1250px) {
+  main .influencerBanner {
+    padding: 70px 0;
+    padding-top: 20px;
+  }
+  main .influencerBanner .container {
+    flex-direction: column-reverse;
+  }
+  main .influencerBanner .container .influencerBannerLeft {
+    width: 100%;
+    padding: 0;
+  }
+  main .influencerBanner .container .influencerBannerLeft h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  main .influencerBanner .container .influencerBannerRight {
+    width: 520px;
+    max-width: 90%;
+    padding: 0;
+  }
+  main .signupExplore .container .exploreWrapper h2 {
+    font-size: 50px;
+  }
+  main .signupExplore .container .exploreWrapper button {
+    font-size: 16px;
+  }
+  main .chooseUs .container h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  main .chooseUs .container .chooseWrap .singleChoose .chooseVid iframe {
+    height: 280px;
+  }
+  main .chooseUs .container .chooseWrap .singleChoose .chooseText h3 {
+    font-size: 35px;
+  }
+  main .chooseUs .container .chooseWrap .singleChoose .chooseText p {
+    font-size: 16px;
+  }
+  main .getStart .container h2 {
+    font-size: 40px;
+  }
+  main .buildTeam .container .buildTeamWrapper .buildTeamContent h2 {
+    font-size: 35px;
+  }
+  main .buildTeam .container .buildTeamWrapper .buildTeamContent button {
+    font-size: 16px;
+  }
+}
+@media (max-width: 900px) {
+  main .signupExplore .container .exploreWrapper {
+    padding: 40px 30px;
+  }
+  main .signupExplore .container .exploreWrapper h2 {
+    font-size: 45px;
+  }
+  main .chooseUs .container .chooseWrap .singleChoose {
+    flex-direction: column-reverse;
+  }
+  main .chooseUs .container .chooseWrap .singleChoose.singleChooseAlt {
+    flex-direction: column;
+  }
+  main .chooseUs .container .chooseWrap .singleChoose.singleChooseAlt .chooseText {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  main .chooseUs .container .chooseWrap .singleChoose.singleChooseAlt .chooseVid {
+    width: 100%;
+    padding: 0;
+  }
+  main .chooseUs .container .chooseWrap .singleChoose .chooseText {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  main .chooseUs .container .chooseWrap .singleChoose .chooseVid {
+    width: 100%;
+    padding: 0;
+  }
+  main .getStart .container .getStartWrap {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  main .buildTeam .container .buildTeamWrapper {
+    padding: 20px;
+  }
+  main .buildTeam .container .buildTeamWrapper .buildTeamContent {
+    max-width: 100%;
+  }
+}
+@media (max-width: 650px) {
+  main .getStart .startBlob1 {
+    left: -200px;
+  }
+  main .getStart .startBlob2 {
+    right: -100px;
+  }
+}
+@media (max-width: 400px) {
+  main .signupExplore .container .exploreWrapper {
+    padding: 20px;
+  }
+  main .signupExplore .container .exploreWrapper h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  main .chooseUs .container .chooseWrap .singleChoose .chooseText h3 {
+    font-size: 30px;
+  }
+}
+main .strategyBanner {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+main .strategyBanner .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main .strategyBanner .container .strategyBannerLeft {
+  width: 45%;
+}
+main .strategyBanner .container .strategyBannerLeft h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  line-height: 65px;
+}
+main .strategyBanner .container .strategyBannerRight {
+  width: 55%;
+}
+main .strategyBanner .container .strategyBannerRight img {
+  width: 100%;
+}
+main .strategyContents {
+  padding: 70px 0;
+}
+main .strategyContents .container .strategyContentWrap .singleStrategyContent {
+  display: flex;
+  align-items: center;
+  padding: 25px 25px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+}
+main .strategyContents .container .strategyContentWrap .singleStrategyContent .strategyContentText {
+  width: 50%;
+  padding-right: 20px;
+}
+main .strategyContents .container .strategyContentWrap .singleStrategyContent .strategyContentText h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main .strategyContents .container .strategyContentWrap .singleStrategyContent .strategyContentText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .strategyContents .container .strategyContentWrap .singleStrategyContent .strategyContentImg {
+  width: 50%;
+  padding-left: 30px;
+}
+main .strategyContents .container .strategyContentWrap .singleStrategyContent .strategyContentImg img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+main .strategyContents .container .strategyContentWrap .singleStrategyContent.singleStrategyContentAlt .strategyContentText {
+  padding-right: 0;
+  padding-left: 20px;
+}
+main .strategyContents .container .strategyContentWrap .singleStrategyContent.singleStrategyContentAlt .strategyContentImg {
+  padding-left: 0;
+  padding-right: 30px;
+}
+main .strategyChoose {
+  padding: 70px 0;
+}
+main .strategyChoose .container h2 {
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+main .strategyChoose .container .strategyChooseWrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+main .strategyChoose .container .strategyChooseWrap .singleStrategyChoose {
+  width: 300px;
+  margin: 0 50px;
+}
+main .strategyChoose .container .strategyChooseWrap .singleStrategyChoose .strategyChooseImg {
+  width: 100%;
+  height: 250px;
+}
+main .strategyChoose .container .strategyChooseWrap .singleStrategyChoose .strategyChooseImg img {
+  width: 75%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+main .strategyChoose .container .strategyChooseWrap .singleStrategyChoose .strategyChooseText {
+  width: 100%;
+}
+main .strategyChoose .container .strategyChooseWrap .singleStrategyChoose .strategyChooseText h3 {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+main .strategyChoose .container .strategyChooseWrap .singleStrategyChoose .strategyChooseText p {
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+}
+main .strategyBenefit {
+  padding: 70px 0;
+}
+main .strategyBenefit .container h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+main .strategyBenefit .container .benefitWrap .singleBenefit {
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+}
+main .strategyBenefit .container .benefitWrap .singleBenefit .benefitText {
+  width: 50%;
+  padding-right: 20px;
+}
+main .strategyBenefit .container .benefitWrap .singleBenefit .benefitText h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main .strategyBenefit .container .benefitWrap .singleBenefit .benefitText ul li {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+main .strategyBenefit .container .benefitWrap .singleBenefit .benefitText ul li .benefitTick {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4C60F6;
+  display: grid;
+  place-items: center;
+  margin-right: 20px;
+}
+main .strategyBenefit .container .benefitWrap .singleBenefit .benefitText ul li .benefitTick i {
+  font-size: 10px;
+  color: #fff;
+}
+main .strategyBenefit .container .benefitWrap .singleBenefit .benefitText ul li .benefitTextItem {
+  width: calc(100% - 40px);
+}
+main .strategyBenefit .container .benefitWrap .singleBenefit .benefitText ul li .benefitTextItem span {
+  font-weight: 600;
+  color: #002E6E;
+}
+main .strategyBenefit .container .benefitWrap .singleBenefit .benefitImg {
+  width: 50%;
+  padding-left: 30px;
+}
+main .strategyBenefit .container .benefitWrap .singleBenefit .benefitImg img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 24px 2px #ccc;
+}
+main .strategyBenefit .container .benefitWrap .singleBenefit.singleBenefitAlt .benefitText {
+  padding-right: 0;
+  padding-left: 20px;
+}
+main .strategyBenefit .container .benefitWrap .singleBenefit.singleBenefitAlt .benefitImg {
+  padding-left: 0;
+  padding-right: 30px;
+}
+main .strategyTransform {
+  padding: 70px 0;
+}
+main .strategyTransform .container .transformWrap {
+  width: 100%;
+  padding: 60px 70px;
+  border-radius: 15px;
+  background-color: rgba(76, 96, 246, 0.09);
+  position: relative;
+  overflow: hidden;
+}
+main .strategyTransform .container .transformWrap .stBlob1 {
+  width: 390px;
+  position: absolute;
+  left: 80px;
+  top: -70px;
+  opacity: 0.7;
+}
+main .strategyTransform .container .transformWrap .stBlob2 {
+  width: 290px;
+  position: absolute;
+  right: 180px;
+  bottom: -10px;
+  opacity: 0.3;
+}
+main .strategyTransform .container .transformWrap .transformContent {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+main .strategyTransform .container .transformWrap .transformContent h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+main .strategyTransform .container .transformWrap .transformContent button {
+  width: fit-content;
+  padding: 20px 30px;
+  border: none;
+  background-color: #4C60F6;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+@media (max-width: 1250px) {
+  main .strategyBanner {
+    padding: 70px 0;
+    padding-top: 20px;
+  }
+  main .strategyBanner .container {
+    flex-direction: column-reverse;
+  }
+  main .strategyBanner .container .strategyBannerLeft {
+    width: 100%;
+  }
+  main .strategyBanner .container .strategyBannerLeft h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  main .strategyBanner .container .strategyBannerRight {
+    width: 520px;
+    max-width: 90%;
+  }
+  main .strategyContents .container .strategyContentWrap .singleStrategyContent .strategyContentText h3 {
+    font-size: 35px;
+  }
+  main .strategyContents .container .strategyContentWrap .singleStrategyContent .strategyContentText p {
+    font-size: 16px;
+  }
+  main .strategyChoose .container h2 {
+    font-size: 40px;
+  }
+  main .strategyBenefit .container h2 {
+    font-size: 40px;
+  }
+  main .strategyBenefit .container .benefitWrap .singleBenefit .benefitText h3 {
+    font-size: 35px;
+  }
+  main .strategyTransform .container .transformWrap .transformContent button {
+    padding: 15px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 900px) {
+  main .strategyContents .container .strategyContentWrap .singleStrategyContent {
+    flex-direction: column;
+  }
+  main .strategyContents .container .strategyContentWrap .singleStrategyContent.singleStrategyContentAlt {
+    flex-direction: column-reverse;
+  }
+  main .strategyContents .container .strategyContentWrap .singleStrategyContent.singleStrategyContentAlt .strategyContentText {
+    width: 100%;
+    padding: 0;
+  }
+  main .strategyContents .container .strategyContentWrap .singleStrategyContent.singleStrategyContentAlt .strategyContentImg {
+    width: 100%;
+    padding: 0;
+  }
+  main .strategyContents .container .strategyContentWrap .singleStrategyContent .strategyContentText {
+    width: 100%;
+    padding: 0;
+  }
+  main .strategyContents .container .strategyContentWrap .singleStrategyContent .strategyContentImg {
+    width: 100%;
+    padding: 0;
+  }
+  main .strategyBenefit .container .benefitWrap .singleBenefit {
+    flex-direction: column;
+  }
+  main .strategyBenefit .container .benefitWrap .singleBenefit.singleBenefitAlt {
+    flex-direction: column-reverse;
+  }
+  main .strategyBenefit .container .benefitWrap .singleBenefit.singleBenefitAlt .benefitText {
+    width: 100%;
+    padding: 0;
+  }
+  main .strategyBenefit .container .benefitWrap .singleBenefit.singleBenefitAlt .benefitImg {
+    width: 100%;
+    padding: 0;
+  }
+  main .strategyBenefit .container .benefitWrap .singleBenefit .benefitText {
+    width: 100%;
+    padding: 0;
+  }
+  main .strategyBenefit .container .benefitWrap .singleBenefit .benefitImg {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 650px) {
+  main .strategyTransform .container .transformWrap {
+    padding: 20px;
+  }
+  main .strategyTransform .container .transformWrap .transformContent {
+    width: 100%;
+  }
+  main .strategyTransform .container .transformWrap .transformContent h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 400px) {
+  main .strategyContents .container .strategyContentWrap .singleStrategyContent .strategyContentText h3 {
+    font-size: 30px;
+  }
+  main .strategyBenefit .container .benefitWrap .singleBenefit .benefitText h3 {
+    font-size: 30px;
+  }
+}
+main .boostBanner {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+main .boostBanner .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main .boostBanner .container .boostBannerLeft {
+  width: 55%;
+}
+main .boostBanner .container .boostBannerLeft img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+main .boostBanner .container .boostBannerRight {
+  width: 45%;
+}
+main .boostBanner .container .boostBannerRight h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  line-height: 65px;
+}
+main .boostPackage {
+  padding: 60px 0;
+}
+main .boostPackage .container .boostPackageWrap .singleBoostPackage {
+  display: flex;
+  align-items: center;
+  padding: 25px 25px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+}
+main .boostPackage .container .boostPackageWrap .singleBoostPackage .boostPackageText {
+  width: 50%;
+  padding-right: 20px;
+}
+main .boostPackage .container .boostPackageWrap .singleBoostPackage .boostPackageText h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main .boostPackage .container .boostPackageWrap .singleBoostPackage .boostPackageText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .boostPackage .container .boostPackageWrap .singleBoostPackage .boostPackageImg {
+  width: 50%;
+  padding-left: 30px;
+}
+main .boostPackage .container .boostPackageWrap .singleBoostPackage .boostPackageImg img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+main .boostPackage .container .boostPackageWrap .singleBoostPackage.singleBoostPackageAlt .boostPackageImg {
+  padding-left: 0;
+  padding-right: 30px;
+}
+main .boostPackage .container .boostPackageWrap .singleBoostPackage.singleBoostPackageAlt .boostPackageText {
+  padding-right: 0;
+  padding-left: 20px;
+}
+main .boostOffer {
+  padding: 60px 0;
+}
+main .boostOffer .container .boostOfferWrap {
+  display: flex;
+  align-items: center;
+}
+main .boostOffer .container .boostOfferWrap .boostOfferLeft {
+  width: 40%;
+}
+main .boostOffer .container .boostOfferWrap .boostOfferLeft h2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+main .boostOffer .container .boostOfferWrap .boostOfferLeft h2 span {
+  color: #4C60F6;
+  font-weight: 400;
+}
+main .boostOffer .container .boostOfferWrap .boostOfferRight {
+  width: 60%;
+  padding-left: 50px;
+}
+main .boostOffer .container .boostOfferWrap .boostOfferRight .boostOfferRightContent {
+  width: 100%;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+  box-shadow: 0px 0px 24px 2px #ccc;
+}
+main .boostOffer .container .boostOfferWrap .boostOfferRight .boostOfferRightContent iframe {
+  width: 100%;
+  height: 400px;
+}
+main .boostForm {
+  padding: 70px 0;
+}
+main .boostForm .container .boostFormContent {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+  padding: 40px 30px;
+  position: relative;
+  overflow: hidden;
+}
+main .boostForm .container .boostFormContent::before {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  border: 150px solid rgba(76, 96, 246, 0.05);
+  content: "";
+  position: absolute;
+  left: -420px;
+  top: -420px;
+  z-index: -1;
+}
+main .boostForm .container .boostFormContent .boostFormLeft {
+  width: 50%;
+  padding-right: 25px;
+}
+main .boostForm .container .boostFormContent .boostFormLeft h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+main .boostForm .container .boostFormContent .boostFormLeft ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+main .boostForm .container .boostFormContent .boostFormLeft ul li span:first-child {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4C60F6;
+  display: grid;
+  place-items: center;
+  margin-right: 10px;
+}
+main .boostForm .container .boostFormContent .boostFormLeft ul li span:first-child i {
+  font-size: 10px;
+  color: #fff;
+}
+main .boostForm .container .boostFormContent .boostFormLeft ul li span:last-child {
+  width: calc(100% - 30px);
+}
+main .boostForm .container .boostFormContent form {
+  width: 50%;
+  background-color: #fff;
+  box-shadow: 0px 0px 26px -14px #ccc;
+  border-radius: 10px;
+  padding: 20px;
+}
+main .boostForm .container .boostFormContent form .boostFormInp {
+  width: 100%;
+  margin-bottom: 25px;
+}
+main .boostForm .container .boostFormContent form .boostFormInp label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #666666;
+  display: block;
+  margin-bottom: 4px;
+}
+main .boostForm .container .boostFormContent form .boostFormInp label span {
+  color: red;
+}
+main .boostForm .container .boostFormContent form .boostFormInp input,
+main .boostForm .container .boostFormContent form .boostFormInp select {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 15px;
+  padding: 0 10px;
+}
+main .boostForm .container .boostFormContent form .boostFormBtn {
+  padding: 15px 25px;
+  background-color: #4C60F6;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+@media (max-width: 1250px) {
+  main .boostBanner {
+    padding: 70px 0;
+    padding-top: 20px;
+  }
+  main .boostBanner .container {
+    flex-direction: column;
+  }
+  main .boostBanner .container .boostBannerLeft {
+    width: 520px;
+    max-width: 90%;
+    padding: 0;
+  }
+  main .boostBanner .container .boostBannerRight {
+    width: 100%;
+    padding: 0;
+  }
+  main .boostBanner .container .boostBannerRight h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  main .boostPackage .container .boostPackageWrap .singleBoostPackage .boostPackageText h3 {
+    font-size: 35px;
+  }
+  main .boostPackage .container .boostPackageWrap .singleBoostPackage .boostPackageText p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 900px) {
+  main .boostPackage .container .boostPackageWrap .singleBoostPackage {
+    flex-direction: column;
+  }
+  main .boostPackage .container .boostPackageWrap .singleBoostPackage.singleBoostPackageAlt {
+    flex-direction: column-reverse;
+  }
+  main .boostPackage .container .boostPackageWrap .singleBoostPackage.singleBoostPackageAlt .boostPackageText {
+    width: 100%;
+    padding: 0;
+  }
+  main .boostPackage .container .boostPackageWrap .singleBoostPackage.singleBoostPackageAlt .boostPackageImg {
+    width: 100%;
+    padding: 0;
+  }
+  main .boostPackage .container .boostPackageWrap .singleBoostPackage .boostPackageText {
+    width: 100%;
+    padding: 0;
+  }
+  main .boostPackage .container .boostPackageWrap .singleBoostPackage .boostPackageImg {
+    width: 100%;
+    padding: 0;
+  }
+  main .boostOffer .container .boostOfferWrap {
+    flex-direction: column;
+  }
+  main .boostOffer .container .boostOfferWrap .boostOfferLeft {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  main .boostOffer .container .boostOfferWrap .boostOfferRight {
+    width: 100%;
+    padding: 0;
+  }
+  main .boostForm .container .boostFormContent {
+    flex-direction: column;
+  }
+  main .boostForm .container .boostFormContent .boostFormLeft {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  main .boostForm .container .boostFormContent form {
+    width: 100%;
+  }
+  main .boostForm .container .boostFormContent form .boostFormBtn {
+    padding: 15px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 650px) {
+  main .boostOffer .container .boostOfferWrap .boostOfferLeft h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 400px) {
+  main .boostPackage .container .boostPackageWrap .singleBoostPackage .boostPackageText h3 {
+    font-size: 30px;
+  }
+  main .boostOffer .container .boostOfferWrap .boostOfferRight .boostOfferRightContent iframe {
+    height: 200px;
+  }
+}
+main .digitalSolBanner {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+main .digitalSolBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .digitalSolBanner .container .digitalSolBannerLeft {
+  width: 45%;
+  padding-right: 25px;
+}
+main .digitalSolBanner .container .digitalSolBannerLeft h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  line-height: 65px;
+}
+main .digitalSolBanner .container .digitalSolBannerLeft p {
+  margin-bottom: 25px;
+}
+main .digitalSolBanner .container .digitalSolBannerLeft button {
+  background-color: #002E6E;
+  padding: 12px 25px;
+}
+main .digitalSolBanner .container .digitalSolBannerRight {
+  width: 55%;
+  padding-left: 20px;
+}
+main .digitalSolBanner .container .digitalSolBannerRight img {
+  width: 100%;
+}
+main .digitalSolPack {
+  padding: 60px 0;
+  padding-top: 0;
+}
+main .digitalSolPack .container .solPackHeading {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main .digitalSolPack .container .solPackHeading h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .digitalSolPack .container .solPackHeading p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .digitalSolPack .container .solPackWrap .singleSolPack {
+  display: flex;
+  align-items: center;
+  padding: 25px 25px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+}
+main .digitalSolPack .container .solPackWrap .singleSolPack .solImg {
+  width: 53%;
+}
+main .digitalSolPack .container .solPackWrap .singleSolPack .solImg img {
+  width: 100%;
+  height: 380px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+main .digitalSolPack .container .solPackWrap .singleSolPack .solText {
+  width: 47%;
+  padding-left: 45px;
+}
+main .digitalSolPack .container .solPackWrap .singleSolPack .solText h3 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+main .digitalSolPack .container .solPackWrap .singleSolPack .solText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 28px;
+}
+main .digitalSolPack .container .solPackWrap .singleSolPack.singleSolPackAlt .solText {
+  padding-left: 0;
+  padding-right: 45px;
+}
+main .solExtra {
+  padding: 60px 0;
+  background-color: rgba(224, 221, 235, 0.262745098);
+  margin-bottom: 80px;
+}
+main .solExtra .container .extraText {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+main .solExtra .container .extraText h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main .solExtra .container .extraText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+main .solExtra .container .extraText button {
+  width: fit-content;
+  padding: 20px 30px;
+  border: none;
+  background-color: #4C60F6;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+@media (max-width: 1250px) {
+  main .digitalSolBanner {
+    padding: 70px 0;
+    padding-top: 20px;
+  }
+  main .digitalSolBanner .container {
+    flex-direction: column-reverse;
+  }
+  main .digitalSolBanner .container .digitalSolBannerLeft {
+    width: 100%;
+    padding-right: 0;
+  }
+  main .digitalSolBanner .container .digitalSolBannerLeft h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  main .digitalSolBanner .container .digitalSolBannerRight {
+    width: 520px;
+    max-width: 90%;
+    padding-left: 0;
+  }
+  main .digitalSolPack .container .solPackHeading h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  main .digitalSolPack .container .solPackHeading p {
+    font-size: 16px;
+  }
+  main .digitalSolPack .container .solPackWrap .singleSolPack .solImg img {
+    height: 280px;
+  }
+  main .digitalSolPack .container .solPackWrap .singleSolPack .solText h3 {
+    font-size: 35px;
+  }
+  main .digitalSolPack .container .solPackWrap .singleSolPack .solText p {
+    font-size: 16px;
+  }
+  main .solExtra .container .extraText h2 {
+    font-size: 35px;
+  }
+  main .solExtra .container .extraText p {
+    font-size: 16px;
+  }
+  main .solExtra .container .extraText button {
+    padding: 15px;
+  }
+}
+@media (max-width: 900px) {
+  main .digitalSolPack .container .solPackWrap .singleSolPack {
+    flex-direction: column;
+  }
+  main .digitalSolPack .container .solPackWrap .singleSolPack .solImg {
+    width: 100%;
+  }
+  main .digitalSolPack .container .solPackWrap .singleSolPack .solText {
+    width: 100%;
+    padding-left: 0;
+  }
+  main .digitalSolPack .container .solPackWrap .singleSolPack.singleSolPackAlt {
+    flex-direction: column-reverse;
+  }
+  main .digitalSolPack .container .solPackWrap .singleSolPack.singleSolPackAlt .solText {
+    padding-right: 0;
+  }
+}
+main .contentMarBanner {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+main .contentMarBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .contentMarBanner .container .contentMarBannerLeft {
+  width: 45%;
+  padding-right: 25px;
+}
+main .contentMarBanner .container .contentMarBannerLeft h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  line-height: 65px;
+}
+main .contentMarBanner .container .contentMarBannerLeft p {
+  margin-bottom: 25px;
+}
+main .contentMarBanner .container .contentMarBannerLeft button {
+  background-color: #002E6E;
+  padding: 12px 25px;
+}
+main .contentMarBanner .container .contentMarBannerRight {
+  width: 55%;
+  padding-left: 20px;
+}
+main .contentMarBanner .container .contentMarBannerRight img {
+  width: 100%;
+}
+main .contentService .container h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 100px;
+}
+main .contentService .container .contentSerWrap .singleContentSer {
+  display: flex;
+  align-items: center;
+  padding: 25px 25px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+}
+main .contentService .container .contentSerWrap .singleContentSer .contentSerImg {
+  width: 50%;
+  padding-right: 25px;
+}
+main .contentService .container .contentSerWrap .singleContentSer .contentSerImg img {
+  width: 100%;
+  height: 550px;
+  object-fit: contain;
+}
+main .contentService .container .contentSerWrap .singleContentSer .contentSerText {
+  width: 50%;
+  padding-left: 20px;
+}
+main .contentService .container .contentSerWrap .singleContentSer .contentSerText h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main .contentService .container .contentSerWrap .singleContentSer .contentSerText ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  line-height: 25px;
+  font-size: 17px;
+}
+main .contentService .container .contentSerWrap .singleContentSer .contentSerText ul li span {
+  width: 19px;
+  height: 19px;
+  background-color: #4C60F6;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-right: 15px;
+}
+main .contentService .container .contentSerWrap .singleContentSer .contentSerText ul li span i {
+  font-size: 9px;
+  color: #fff;
+}
+main .contentService .container .contentSerWrap .singleContentSer .contentSerText ul li .conSerPara {
+  width: calc(100% - 34px);
+  height: unset;
+  background-color: unset;
+  border-radius: 0;
+  margin: 0;
+  display: unset;
+}
+main .contentService .container .contentSerWrap .singleContentSer .contentSerText ul li .conSerPara span {
+  width: fit-content;
+  height: unset;
+  background-color: unset;
+  border-radius: 0;
+  margin: 0;
+  display: unset;
+  font-weight: 700;
+}
+main .contentService .container .contentSerWrap .singleContentSer.singleContentSerAlt .contentSerImg {
+  padding-right: 0;
+  padding-left: 25px;
+}
+main .contentService .container .contentSerWrap .singleContentSer.singleContentSerAlt .contentSerText {
+  padding-left: 0;
+  padding-right: 20px;
+}
+main .conExtra {
+  padding: 60px 0;
+  background-color: rgba(224, 221, 235, 0.262745098);
+  margin-bottom: 80px;
+}
+main .conExtra .container .extraText {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+main .conExtra .container .extraText h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main .conExtra .container .extraText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+main .conExtra .container .extraText button {
+  width: fit-content;
+  padding: 20px 30px;
+  border: none;
+  background-color: #002E6E;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+@media (max-width: 1250px) {
+  main .contentMarBanner {
+    padding: 70px 0;
+    padding-top: 20px;
+  }
+  main .contentMarBanner .container {
+    flex-direction: column-reverse;
+  }
+  main .contentMarBanner .container .contentMarBannerLeft {
+    width: 100%;
+    padding-right: 0;
+  }
+  main .contentMarBanner .container .contentMarBannerLeft h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  main .contentMarBanner .container .contentMarBannerLeft button {
+    padding: 15px;
+  }
+  main .contentMarBanner .container .contentMarBannerRight {
+    width: 520px;
+    max-width: 90%;
+    padding-left: 0;
+  }
+  main .contentService .container h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  main .contentService .container h2 br {
+    display: none;
+  }
+  main .contentService .container .contentSerWrap .singleContentSer .contentSerImg img {
+    height: 400px;
+  }
+  main .contentService .container .contentSerWrap .singleContentSer .contentSerText h3 {
+    font-size: 35px;
+  }
+  main .conExtra .container .extraText h2 {
+    font-size: 35px;
+  }
+  main .conExtra .container .extraText p {
+    font-size: 16px;
+  }
+  main .conExtra .container .extraText button {
+    padding: 15px;
+  }
+}
+@media (max-width: 900px) {
+  main .contentService .container .contentSerWrap .singleContentSer {
+    flex-direction: column;
+  }
+  main .contentService .container .contentSerWrap .singleContentSer .contentSerImg {
+    width: 100%;
+    padding-right: 0;
+  }
+  main .contentService .container .contentSerWrap .singleContentSer .contentSerText {
+    padding-left: 0;
+    width: 100%;
+  }
+  main .contentService .container .contentSerWrap .singleContentSer.singleContentSerAlt {
+    flex-direction: column-reverse;
+  }
+  main .contentService .container .contentSerWrap .singleContentSer.singleContentSerAlt .contentSerImg {
+    padding-left: 0;
+  }
+  main .contentService .container .contentSerWrap .singleContentSer.singleContentSerAlt .contentSerText {
+    padding-right: 0;
+  }
+}
+main .offlineBanner {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+main .offlineBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .offlineBanner .container .offlineBannerLeft {
+  width: 55%;
+  padding-right: 20px;
+}
+main .offlineBanner .container .offlineBannerLeft img {
+  width: 100%;
+}
+main .offlineBanner .container .offlineBannerRight {
+  width: 45%;
+  padding-left: 25px;
+}
+main .offlineBanner .container .offlineBannerRight h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  line-height: 65px;
+}
+main .offlineBanner .container .offlineBannerRight p {
+  margin-bottom: 25px;
+}
+main .offlineBanner .container .offlineBannerRight button {
+  background-color: #002E6E;
+  padding: 12px 25px;
+}
+main .offlineMar {
+  padding: 70px 0;
+}
+main .offlineMar .container h2 {
+  width: 100%;
+  max-width: 900px;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main .offlineMar .container .singleOfflineMar {
+  display: flex;
+  align-items: center;
+  padding: 25px 25px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+}
+main .offlineMar .container .singleOfflineMar .offlineMarText {
+  width: 50%;
+  padding-right: 20px;
+}
+main .offlineMar .container .singleOfflineMar .offlineMarText h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main .offlineMar .container .singleOfflineMar .offlineMarText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .offlineMar .container .singleOfflineMar .offlineMarImg {
+  width: 50%;
+  padding-left: 25px;
+}
+main .offlineMar .container .singleOfflineMar .offlineMarImg img {
+  width: 100%;
+}
+main .offlineMar .container .singleOfflineMar.singleOfflineMarAlt .offlineMarText {
+  padding-right: 0;
+  padding-left: 20px;
+}
+main .offlineMar .container .singleOfflineMar.singleOfflineMarAlt .offlineMarImg {
+  padding-left: 0;
+  padding-right: 25px;
+}
+main .offlineDis {
+  padding: 60px 0;
+  background-color: rgba(224, 221, 235, 0.262745098);
+  margin-bottom: 80px;
+}
+main .offlineDis .container .offDisText {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+main .offlineDis .container .offDisText h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main .offlineDis .container .offDisText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+main .offlineDis .container .offDisText button {
+  width: fit-content;
+  padding: 20px 30px;
+  border: none;
+  background-color: #002E6E;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+@media (max-width: 1250px) {
+  main .offlineBanner {
+    padding: 70px 0;
+    padding-top: 20px;
+  }
+  main .offlineBanner .container {
+    flex-direction: column;
+  }
+  main .offlineBanner .container .offlineBannerLeft {
+    width: 520px;
+    padding-right: 0;
+  }
+  main .offlineBanner .container .offlineBannerLeft h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  main .offlineBanner .container .offlineBannerLeft button {
+    padding: 15px;
+  }
+  main .offlineBanner .container .offlineBannerRight {
+    width: 100%;
+    max-width: 90%;
+    padding-left: 0;
+  }
+  main .offlineMar .container h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  main .offlineMar .container .singleOfflineMar .offlineMarText h3 {
+    font-size: 35px;
+  }
+  main .offlineDis .container .offDisText h2 {
+    font-size: 35px;
+  }
+  main .offlineDis .container .offDisText p {
+    font-size: 16px;
+  }
+  main .offlineDis .container .offDisText button {
+    padding: 15px;
+  }
+}
+@media (max-width: 900px) {
+  main .offlineMar .container .singleOfflineMar {
+    flex-direction: column-reverse;
+  }
+  main .offlineMar .container .singleOfflineMar .offlineMarText {
+    width: 100%;
+    padding-right: 0;
+  }
+  main .offlineMar .container .singleOfflineMar .offlineMarImg {
+    width: 100%;
+    padding-left: 0;
+  }
+  main .offlineMar .container .singleOfflineMar.singleOfflineMarAlt {
+    flex-direction: column;
+  }
+  main .offlineMar .container .singleOfflineMar.singleOfflineMarAlt .offlineMarText {
+    padding-left: 0;
+  }
+  main .offlineMar .container .singleOfflineMar.singleOfflineMarAlt .offlineMarImg {
+    padding-right: 0;
+  }
+}
+main .designBanner {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+main .designBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .designBanner .container .designBannerLeft {
+  width: 55%;
+  padding-right: 20px;
+}
+main .designBanner .container .designBannerLeft img {
+  width: 100%;
+}
+main .designBanner .container .designBannerRight {
+  width: 45%;
+  padding-left: 25px;
+}
+main .designBanner .container .designBannerRight h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  line-height: 65px;
+}
+main .designBanner .container .designBannerRight p {
+  margin-bottom: 25px;
+}
+main .designBanner .container .designBannerRight button {
+  background-color: #002E6E;
+  padding: 12px 25px;
+}
+main .designPack {
+  padding: 70px 0;
+}
+main .designPack .container h2 {
+  width: 100%;
+  max-width: 900px;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main .designPack .container .singleDesignPack {
+  display: flex;
+  align-items: center;
+  padding: 25px 25px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+}
+main .designPack .container .singleDesignPack .designPackText {
+  width: 50%;
+  padding-right: 20px;
+}
+main .designPack .container .singleDesignPack .designPackText h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main .designPack .container .singleDesignPack .designPackText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .designPack .container .singleDesignPack .designPackImg {
+  width: 50%;
+  padding-left: 25px;
+}
+main .designPack .container .singleDesignPack .designPackImg img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+main .designPack .container .singleDesignPack.singleDesignPackAlt .designPackText {
+  padding-right: 0;
+  padding-left: 20px;
+}
+main .designPack .container .singleDesignPack.singleDesignPackAlt .designPackImg {
+  padding-left: 0;
+  padding-right: 25px;
+}
+main .designDis {
+  padding: 60px 0;
+  background-color: rgba(224, 221, 235, 0.262745098);
+  margin-bottom: 80px;
+}
+main .designDis .container .designDisText {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+main .designDis .container .designDisText h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main .designDis .container .designDisText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+main .designDis .container .designDisText button {
+  width: fit-content;
+  padding: 20px 30px;
+  border: none;
+  background-color: #002E6E;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+@media (max-width: 1250px) {
+  main .designBanner {
+    padding: 70px 0;
+    padding-top: 20px;
+  }
+  main .designBanner .container {
+    flex-direction: column;
+  }
+  main .designBanner .container .designBannerLeft {
+    width: 520px;
+    padding-right: 0;
+  }
+  main .designBanner .container .designBannerLeft h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  main .designBanner .container .designBannerLeft button {
+    padding: 15px;
+  }
+  main .designBanner .container .designBannerRight {
+    width: 100%;
+    max-width: 90%;
+    padding-left: 0;
+  }
+  main .designPack .container h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  main .designPack .container .singleDesignPack .designPackText h3 {
+    font-size: 35px;
+  }
+  main .designDis .container .designDisText h2 {
+    font-size: 35px;
+  }
+  main .designDis .container .designDisText p {
+    font-size: 16px;
+  }
+  main .designDis .container .designDisText button {
+    padding: 15px;
+  }
+}
+@media (max-width: 900px) {
+  main .designPack .container .singleDesignPack {
+    flex-direction: column-reverse;
+  }
+  main .designPack .container .singleDesignPack .designPackText {
+    width: 100%;
+    padding-right: 0;
+  }
+  main .designPack .container .singleDesignPack .designPackImg {
+    width: 100%;
+    padding-left: 0;
+  }
+  main .designPack .container .singleDesignPack.singleDesignPackAlt {
+    flex-direction: column;
+  }
+  main .designPack .container .singleDesignPack.singleDesignPackAlt .designPackText {
+    padding-left: 0;
+  }
+  main .designPack .container .singleDesignPack.singleDesignPackAlt .designPackImg {
+    padding-right: 0;
+  }
+}
+main .strategicBanner {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+main .strategicBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .strategicBanner .container .strategicBannerLeft {
+  width: 55%;
+  padding-right: 20px;
+}
+main .strategicBanner .container .strategicBannerLeft img {
+  width: 100%;
+}
+main .strategicBanner .container .strategicBannerRight {
+  width: 45%;
+  padding-left: 25px;
+}
+main .strategicBanner .container .strategicBannerRight h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  line-height: 65px;
+}
+main .strategicBanner .container .strategicBannerRight p {
+  margin-bottom: 25px;
+}
+main .strategicBanner .container .strategicBannerRight button {
+  background-color: #002E6E;
+  padding: 12px 25px;
+}
+main .strateicPack {
+  padding: 70px 0;
+}
+main .strateicPack .container h2 {
+  width: 100%;
+  max-width: 900px;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main .strateicPack .container .singleStrategicPack {
+  display: flex;
+  align-items: center;
+  padding: 25px 25px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+}
+main .strateicPack .container .singleStrategicPack .strategicPackText {
+  width: 50%;
+  padding-right: 20px;
+}
+main .strateicPack .container .singleStrategicPack .strategicPackText h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main .strateicPack .container .singleStrategicPack .strategicPackText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .strateicPack .container .singleStrategicPack .strategicPackImg {
+  width: 50%;
+  padding-left: 25px;
+}
+main .strateicPack .container .singleStrategicPack .strategicPackImg img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+main .strateicPack .container .singleStrategicPack.singleStrategicPackAlt .strategicPackText {
+  padding-right: 0;
+  padding-left: 20px;
+}
+main .strateicPack .container .singleStrategicPack.singleStrategicPackAlt .strategicPackImg {
+  padding-left: 0;
+  padding-right: 25px;
+}
+main .strategicDis {
+  padding: 60px 0;
+  background-color: rgba(224, 221, 235, 0.262745098);
+  margin-bottom: 80px;
+}
+main .strategicDis .container .strategicDisText {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+main .strategicDis .container .strategicDisText h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main .strategicDis .container .strategicDisText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+main .strategicDis .container .strategicDisText button {
+  width: fit-content;
+  padding: 20px 30px;
+  border: none;
+  background-color: #002E6E;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+@media (max-width: 1250px) {
+  main .strategicBanner {
+    padding: 70px 0;
+    padding-top: 20px;
+  }
+  main .strategicBanner .container {
+    flex-direction: column;
+  }
+  main .strategicBanner .container .strategicBannerLeft {
+    width: 520px;
+    padding-right: 0;
+  }
+  main .strategicBanner .container .strategicBannerLeft h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  main .strategicBanner .container .strategicBannerLeft button {
+    padding: 15px;
+  }
+  main .strategicBanner .container .strategicBannerRight {
+    width: 100%;
+    max-width: 90%;
+    padding-left: 0;
+  }
+  main .strateicPack .container h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  main .strateicPack .container .singleStrategicPack .strategicPackText h3 {
+    font-size: 35px;
+  }
+  main .strategicDis .container .strategicDisText h2 {
+    font-size: 35px;
+  }
+  main .strategicDis .container .strategicDisText p {
+    font-size: 16px;
+  }
+  main .strategicDis .container .strategicDisText button {
+    padding: 15px;
+  }
+}
+@media (max-width: 900px) {
+  main .strateicPack .container .singleStrategicPack {
+    flex-direction: column-reverse;
+  }
+  main .strateicPack .container .singleStrategicPack .strategicPackText {
+    width: 100%;
+    padding-right: 0;
+  }
+  main .strateicPack .container .singleStrategicPack .strategicPackImg {
+    width: 100%;
+    padding-left: 0;
+  }
+  main .strateicPack .container .singleStrategicPack.singleStrategicPackAlt {
+    flex-direction: column;
+  }
+  main .strateicPack .container .singleStrategicPack.singleStrategicPackAlt .strategicPackText {
+    padding-left: 0;
+  }
+  main .strateicPack .container .singleStrategicPack.singleStrategicPackAlt .strategicPackImg {
+    padding-right: 0;
+  }
+}
+main .impactBanner {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+main .impactBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .impactBanner .container .impactBannerLeft {
+  width: 55%;
+  padding-right: 20px;
+}
+main .impactBanner .container .impactBannerLeft img {
+  width: 100%;
+}
+main .impactBanner .container .impactBannerRight {
+  width: 45%;
+  padding-left: 25px;
+}
+main .impactBanner .container .impactBannerRight h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  line-height: 65px;
+}
+main .impactBanner .container .impactBannerRight p {
+  margin-bottom: 25px;
+}
+main .impactBanner .container .impactBannerRight button {
+  background-color: #002E6E;
+  padding: 12px 25px;
+}
+main .impactPack {
+  padding: 70px 0;
+}
+main .impactPack .container h2 {
+  width: 100%;
+  max-width: 900px;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main .impactPack .container .singleImpactPack {
+  display: flex;
+  align-items: center;
+  padding: 25px 25px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+}
+main .impactPack .container .singleImpactPack .impactPackText {
+  width: 50%;
+  padding-right: 20px;
+}
+main .impactPack .container .singleImpactPack .impactPackText h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main .impactPack .container .singleImpactPack .impactPackText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .impactPack .container .singleImpactPack .impactPackImg {
+  width: 50%;
+  padding-left: 25px;
+}
+main .impactPack .container .singleImpactPack .impactPackImg img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+main .impactPack .container .singleImpactPack.singleImpactPackAlt .impactPackText {
+  padding-right: 0;
+  padding-left: 20px;
+}
+main .impactPack .container .singleImpactPack.singleImpactPackAlt .impactPackImg {
+  padding-left: 0;
+  padding-right: 25px;
+}
+main .impactDis {
+  padding: 60px 0;
+  background-color: rgba(224, 221, 235, 0.262745098);
+  margin-bottom: 80px;
+}
+main .impactDis .container .impactDisText {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+main .impactDis .container .impactDisText h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main .impactDis .container .impactDisText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+main .impactDis .container .impactDisText button {
+  width: fit-content;
+  padding: 20px 30px;
+  border: none;
+  background-color: #002E6E;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+@media (max-width: 1250px) {
+  main .impactBanner {
+    padding: 70px 0;
+    padding-top: 20px;
+  }
+  main .impactBanner .container {
+    flex-direction: column;
+  }
+  main .impactBanner .container .impactBannerLeft {
+    width: 100%;
+    padding-right: 0;
+  }
+  main .impactBanner .container .impactBannerLeft h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  main .impactBanner .container .impactBannerLeft button {
+    padding: 15px;
+  }
+  main .impactBanner .container .impactBannerRight {
+    width: 520px;
+    max-width: 90%;
+    padding-left: 0;
+  }
+  main .impactPack .container h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  main .impactPack .container .singleImpactPack .impactPackText h3 {
+    font-size: 35px;
+  }
+  main .impactDis .container .impactDisText h2 {
+    font-size: 35px;
+  }
+  main .impactDis .container .impactDisText p {
+    font-size: 16px;
+  }
+  main .impactDis .container .impactDisText button {
+    padding: 15px;
+  }
+}
+@media (max-width: 900px) {
+  main .impactPack .container .singleImpactPack {
+    flex-direction: column-reverse;
+  }
+  main .impactPack .container .singleImpactPack .impactPackText {
+    width: 100%;
+    padding-right: 0;
+  }
+  main .impactPack .container .singleImpactPack .impactPackImg {
+    width: 100%;
+    padding-left: 0;
+  }
+  main .impactPack .container .singleImpactPack.singleImpactPackAlt {
+    flex-direction: column;
+  }
+  main .impactPack .container .singleImpactPack.singleImpactPackAlt .impactPackText {
+    padding-left: 0;
+  }
+  main .impactPack .container .singleImpactPack.singleImpactPackAlt .impactPackImg {
+    padding-right: 0;
+  }
+}
+main .impactBanner {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+main .impactBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .impactBanner .container .impactBannerLeft {
+  width: 55%;
+  padding-right: 20px;
+}
+main .impactBanner .container .impactBannerLeft img {
+  width: 100%;
+}
+main .impactBanner .container .impactBannerRight {
+  width: 45%;
+  padding-left: 25px;
+}
+main .impactBanner .container .impactBannerRight h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  line-height: 65px;
+}
+main .impactBanner .container .impactBannerRight p {
+  margin-bottom: 25px;
+}
+main .impactBanner .container .impactBannerRight button {
+  background-color: #002E6E;
+  padding: 12px 25px;
+}
+main .impactPack {
+  padding: 70px 0;
+}
+main .impactPack .container h2 {
+  width: 100%;
+  max-width: 900px;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main .impactPack .container .singleImpactPack {
+  display: flex;
+  align-items: center;
+  padding: 25px 25px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+}
+main .impactPack .container .singleImpactPack .impactPackText {
+  width: 50%;
+  padding-right: 20px;
+}
+main .impactPack .container .singleImpactPack .impactPackText h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main .impactPack .container .singleImpactPack .impactPackText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .impactPack .container .singleImpactPack .impactPackImg {
+  width: 50%;
+  padding-left: 25px;
+}
+main .impactPack .container .singleImpactPack .impactPackImg img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+main .impactPack .container .singleImpactPack.singleImpactPackAlt .impactPackText {
+  padding-right: 0;
+  padding-left: 20px;
+}
+main .impactPack .container .singleImpactPack.singleImpactPackAlt .impactPackImg {
+  padding-left: 0;
+  padding-right: 25px;
+}
+main .impactDis {
+  padding: 60px 0;
+  background-color: rgba(224, 221, 235, 0.262745098);
+  margin-bottom: 80px;
+}
+main .impactDis .container .impactDisText {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+main .impactDis .container .impactDisText h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main .impactDis .container .impactDisText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+main .impactDis .container .impactDisText button {
+  width: fit-content;
+  padding: 20px 30px;
+  border: none;
+  background-color: #002E6E;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+@media (max-width: 1250px) {
+  main .impactBanner {
+    padding: 70px 0;
+    padding-top: 20px;
+  }
+  main .impactBanner .container {
+    flex-direction: column;
+  }
+  main .impactBanner .container .impactBannerLeft {
+    width: 520px;
+    padding-right: 0;
+  }
+  main .impactBanner .container .impactBannerLeft h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  main .impactBanner .container .impactBannerLeft button {
+    padding: 15px;
+  }
+  main .impactBanner .container .impactBannerRight {
+    width: 100%;
+    max-width: 90%;
+    padding-left: 0;
+  }
+  main .impactPack .container h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  main .impactPack .container .singleImpactPack .impactPackText h3 {
+    font-size: 35px;
+  }
+  main .impactDis .container .impactDisText h2 {
+    font-size: 35px;
+  }
+  main .impactDis .container .impactDisText p {
+    font-size: 16px;
+  }
+  main .impactDis .container .impactDisText button {
+    padding: 15px;
+  }
+}
+@media (max-width: 900px) {
+  main .impactPack .container .singleImpactPack {
+    flex-direction: column-reverse;
+  }
+  main .impactPack .container .singleImpactPack .impactPackText {
+    width: 100%;
+    padding-right: 0;
+  }
+  main .impactPack .container .singleImpactPack .impactPackImg {
+    width: 100%;
+    padding-left: 0;
+  }
+  main .impactPack .container .singleImpactPack.singleImpactPackAlt {
+    flex-direction: column;
+  }
+  main .impactPack .container .singleImpactPack.singleImpactPackAlt .impactPackText {
+    padding-left: 0;
+  }
+  main .impactPack .container .singleImpactPack.singleImpactPackAlt .impactPackImg {
+    padding-right: 0;
+  }
+}
+main .customizeBanner {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+main .customizeBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .customizeBanner .container .customizeBannerLeft {
+  width: 55%;
+  padding-right: 20px;
+}
+main .customizeBanner .container .customizeBannerLeft img {
+  width: 100%;
+}
+main .customizeBanner .container .customizeBannerRight {
+  width: 45%;
+  padding-left: 25px;
+}
+main .customizeBanner .container .customizeBannerRight h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  line-height: 65px;
+}
+main .customizeBanner .container .customizeBannerRight p {
+  margin-bottom: 25px;
+}
+main .customizeBanner .container .customizeBannerRight button {
+  background-color: #002E6E;
+  padding: 12px 25px;
+}
+main .customizePack {
+  padding: 70px 0;
+}
+main .customizePack .container h2 {
+  width: 100%;
+  max-width: 900px;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main .customizePack .container .singleCustomizePack {
+  display: flex;
+  align-items: center;
+  padding: 25px 25px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+}
+main .customizePack .container .singleCustomizePack .customizePackText {
+  width: 50%;
+  padding-right: 20px;
+}
+main .customizePack .container .singleCustomizePack .customizePackText h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+main .customizePack .container .singleCustomizePack .customizePackText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .customizePack .container .singleCustomizePack .customizePackImg {
+  width: 50%;
+  padding-left: 25px;
+}
+main .customizePack .container .singleCustomizePack .customizePackImg img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+main .customizePack .container .singleCustomizePack.singleCustomizePackAlt .customizePackText {
+  padding-right: 0;
+  padding-left: 20px;
+}
+main .customizePack .container .singleCustomizePack.singleCustomizePackAlt .customizePackImg {
+  padding-left: 0;
+  padding-right: 25px;
+}
+main .customizeDis {
+  padding: 60px 0;
+  background-color: rgba(224, 221, 235, 0.262745098);
+  margin-bottom: 80px;
+}
+main .customizeDis .container .customizeDisText {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+main .customizeDis .container .customizeDisText h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+main .customizeDis .container .customizeDisText p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+main .customizeDis .container .customizeDisText button {
+  width: fit-content;
+  padding: 20px 30px;
+  border: none;
+  background-color: #002E6E;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+@media (max-width: 1250px) {
+  main .customizeBanner {
+    padding: 70px 0;
+    padding-top: 20px;
+  }
+  main .customizeBanner .container {
+    flex-direction: column;
+  }
+  main .customizeBanner .container .customizeBannerLeft {
+    width: 520px;
+    padding-right: 0;
+  }
+  main .customizeBanner .container .customizeBannerLeft h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  main .customizeBanner .container .customizeBannerLeft button {
+    padding: 15px;
+  }
+  main .customizeBanner .container .customizeBannerRight {
+    width: 100%;
+    max-width: 90%;
+    padding-left: 0;
+  }
+  main .customizePack .container h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  main .customizePack .container .singleCustomizePack .customizePackText h3 {
+    font-size: 35px;
+  }
+  main .customizeDis .container .customizeDisText h2 {
+    font-size: 35px;
+  }
+  main .customizeDis .container .customizeDisText p {
+    font-size: 16px;
+  }
+  main .customizeDis .container .customizeDisText button {
+    padding: 15px;
+  }
+}
+@media (max-width: 900px) {
+  main .customizePack .container .singleCustomizePack {
+    flex-direction: column-reverse;
+  }
+  main .customizePack .container .singleCustomizePack .customizePackText {
+    width: 100%;
+    padding-right: 0;
+  }
+  main .customizePack .container .singleCustomizePack .customizePackImg {
+    width: 100%;
+    padding-left: 0;
+  }
+  main .customizePack .container .singleCustomizePack.singleCustomizePackAlt {
+    flex-direction: column;
+  }
+  main .customizePack .container .singleCustomizePack.singleCustomizePackAlt .customizePackText {
+    padding-left: 0;
+  }
+  main .customizePack .container .singleCustomizePack.singleCustomizePackAlt .customizePackImg {
+    padding-right: 0;
+  }
+}
+main .referralBanner {
+  height: fit-content;
+  padding-bottom: 170px;
+  padding-top: 170px;
+  background-image: linear-gradient(to right, rgb(255, 255, 255) 7%, rgba(255, 255, 255, 0) 75%), url(../images/introduce.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main .referralBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .referralBanner .container .referralBannerLeft {
+  width: 45%;
+  padding-right: 25px;
+}
+main .referralBanner .container .referralBannerLeft h1 {
+  font-size: 45px;
+  margin-bottom: 30px;
+  line-height: 65px;
+}
+main .referralBanner .container .referralBannerLeft p {
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #002E6E;
+}
+main .referralBanner .container .referralBannerLeft button {
+  background-color: #002E6E;
+  padding: 12px 25px;
+}
+main .promotion {
+  padding: 130px 0;
+}
+main .promotion .container .promoHeading {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  text-align: center;
+}
+main .promotion .container .promoHeading h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .promotion .container .promoHeading p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .promotion .container .promoWrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .promotion .container .promoWrap .singlePromo {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 15px;
+}
+main .promotion .container .promoWrap .singlePromo img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+main .promotion .container .promoWrap .singlePromo h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+main .subRefer {
+  padding: 100px 0;
+}
+main .subRefer .container .subHeading {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  text-align: center;
+}
+main .subRefer .container .subHeading h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .subRefer .container .subHeading p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .subRefer .container form {
+  padding: 40px 25px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px -3px #ccc;
+  position: relative;
+  background-color: #fff;
+}
+main .subRefer .container form::before {
+  width: calc(100% - 50px);
+  height: 150px;
+  background-color: rgba(76, 96, 246, 0.0666666667);
+  border-radius: 10px;
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+main .subRefer .container form .subInpRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+main .subRefer .container form .subInpRow input {
+  width: calc(50% - 7px);
+  height: 49px;
+  border: 1px solid #4C60F6;
+  border-radius: 6px;
+  outline: none;
+  font-size: 16px;
+  padding: 0 15px;
+}
+main .subRefer .container form .subInpRow input.singleInp {
+  width: 100%;
+}
+main .subRefer .container form .subInpRow label {
+  display: block;
+  margin-bottom: 5px;
+}
+main .subRefer .container form .subInpRow textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  height: 150px;
+  padding: 15px;
+  border: 1px solid #4C60F6;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+main .subRefer .container form .subInpRow.addInpRow {
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main .subRefer .container form button {
+  width: 190px;
+  height: 55px;
+  background-color: #4C60F6;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  margin-top: 25px;
+}
+
+@media (max-width: 1250px) {
+  main .referralBanner {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+  main .referralBanner .container {
+    flex-direction: column;
+  }
+  main .referralBanner .container .referralBannerLeft {
+    width: 100%;
+    padding-right: 0;
+  }
+  main .referralBanner .container .referralBannerLeft h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  main .promotion {
+    padding: 80px 0;
+  }
+  main .promotion .container .promoHeading h2 {
+    font-size: 40px;
+  }
+  main .promotion .container .promoHeading p {
+    font-size: 16px;
+  }
+  main .subRefer {
+    padding: 80px 0;
+  }
+  main .subRefer .container .subHeading h2 {
+    font-size: 40px;
+  }
+  main .subRefer .container .subHeading p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 900px) {
+  main .subRefer .container form {
+    padding: 35px 15px;
+  }
+  main .subRefer .container form .subInpRow input {
+    padding: 0 5px;
+    font-size: 13px;
+  }
+  main .subRefer .container form .subInpRow textarea {
+    padding: 5px;
+  }
+}
+@media (max-width: 500px) {
+  main .referralBanner {
+    background-image: linear-gradient(to right, rgb(255, 255, 255) 11%, rgba(255, 255, 255, 0) 100%), url(../images/introduce.jpg);
+  }
+  main .subRefer .container form {
+    padding: 30px 10px;
+  }
+  main .subRefer .container form .subInpRow {
+    flex-direction: column;
+  }
+  main .subRefer .container form .subInpRow input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+main .repReviewBanner {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+main .repReviewBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .repReviewBanner .container .repReviewBannerLeft {
+  width: 50%;
+  padding-right: 25px;
+}
+main .repReviewBanner .container .repReviewBannerLeft h3 {
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+main .repReviewBanner .container .repReviewBannerLeft h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+  line-height: 65px;
+}
+main .repReviewBanner .container .repReviewBannerLeft p {
+  margin-bottom: 40px;
+}
+main .repReviewBanner .container .repReviewBannerLeft form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+main .repReviewBanner .container .repReviewBannerLeft form img {
+  width: 20px;
+  opacity: 0.5;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+}
+main .repReviewBanner .container .repReviewBannerLeft form input {
+  width: calc(100% - 140px);
+  height: 52px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border: 2px solid #4C60F6;
+  padding: 0 15px;
+  padding-left: 45px;
+  font-size: 16px;
+  outline: none;
+}
+main .repReviewBanner .container .repReviewBannerLeft form button {
+  width: 140px;
+  height: 52px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: unset;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding: 0;
+  outline: none;
+}
+main .repReviewBanner .container .repReviewBannerRight {
+  width: 50%;
+  padding-left: 20px;
+}
+main .repReviewBanner .container .repReviewBannerRight img {
+  width: 100%;
+}
+main .repReviewSer {
+  padding: 60px 0;
+}
+main .repReviewSer .container h2 {
+  font-size: 35px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main .repReviewSer .container .repRevSerWrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main .repReviewSer .container .repRevSerWrap .singleRepRevSer {
+  width: calc(33.3333333333% - 15px);
+  height: 300px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 1px 1px 14px -4px #ccc;
+  margin-bottom: 30px;
+}
+main .repReviewSer .container .repRevSerWrap .singleRepRevSer img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+main .repReviewSer .container .repRevSerWrap .singleRepRevSer h3 {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+main .repRevContent .container .singleRepRevContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background-color: rgba(76, 96, 246, 0.06);
+}
+main .repRevContent .container .singleRepRevContent .repRevConText {
+  width: 35%;
+  padding-right: 40px;
+}
+main .repRevContent .container .singleRepRevContent .repRevConText h4 {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+main .repRevContent .container .singleRepRevContent .repRevConText h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+main .repRevContent .container .singleRepRevContent .repRevConText p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+main .repRevContent .container .singleRepRevContent .repRevConText button {
+  padding: 10px 30px;
+  font-size: 17px;
+  color: #fff;
+  background-color: #002E6E;
+  border: none;
+  border-radius: 8px;
+}
+main .repRevContent .container .singleRepRevContent .repRevConImg {
+  width: 65%;
+}
+main .repRevContent .container .singleRepRevContent .repRevConImg img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+main .repRevContent .container .singleRepRevContent.singleRepRevContentAlt .repRevConText {
+  padding-right: 0;
+  padding-left: 40px;
+}
+main .repClient {
+  padding: 60px 0;
+}
+main .repClient .container .swiper-wrapper .swiper-slide {
+  width: 380px;
+  max-width: 100%;
+  padding: 20px 0;
+}
+main .repClient .container .swiper-wrapper .swiper-slide .singleRepClient {
+  width: 100%;
+  box-shadow: 1px 1px 13px -3px #ccc;
+  border-radius: 10px;
+  padding: 30px 25px;
+  position: relative;
+}
+main .repClient .container .swiper-wrapper .swiper-slide .singleRepClient img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+main .repClient .container .swiper-wrapper .swiper-slide .singleRepClient .repClientQuoteImg {
+  width: 50px;
+  height: auto;
+  opacity: 0.1;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+main .repClient .container .swiper-wrapper .swiper-slide .singleRepClient p {
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+main .repClient .container .swiper-wrapper .swiper-slide .singleRepClient .repClientInfo {
+  text-align: center;
+}
+main .repClient .container .swiper-wrapper .swiper-slide .singleRepClient .repClientInfo h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+}
+main .repClient .container .swiper-wrapper .swiper-slide .singleRepClient .repClientInfo span {
+  font-size: 12px;
+  color: #6d6d6d;
+}
+main .repRevGrow {
+  padding: 80px 0;
+  padding-bottom: 100px;
+}
+main .repRevGrow .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .repRevGrow .container .repRevGrowLeft {
+  width: 40%;
+  padding-right: 30px;
+}
+main .repRevGrow .container .repRevGrowLeft h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+main .repRevGrow .container .repRevGrowLeft p {
+  margin-bottom: 35px;
+}
+main .repRevGrow .container .repRevGrowLeft button {
+  padding: 15px 40px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #002E6E;
+  border: none;
+  border-radius: 8px;
+}
+main .repRevGrow .container .repRevGrowRight {
+  width: 40%;
+  padding-left: 30px;
+}
+main .repRevGrow .container .repRevGrowRight img {
+  width: 100%;
+  max-width: 380px;
+}
+
+@media (max-width: 900px) {
+  main .repReviewBanner .container {
+    flex-direction: column;
+  }
+  main .repReviewBanner .container .repReviewBannerLeft {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 50px;
+  }
+  main .repReviewBanner .container .repReviewBannerRight {
+    width: 100%;
+    padding-left: 0;
+  }
+  main .repReviewSer .container .repRevSerWrap {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main .repReviewSer .container .repRevSerWrap .singleRepRevSer {
+    width: 260px;
+    height: 320px;
+    margin: 15px;
+    padding: 20px;
+  }
+  main .repRevContent .container .singleRepRevContent {
+    flex-direction: column-reverse;
+  }
+  main .repRevContent .container .singleRepRevContent .repRevConText {
+    width: 100%;
+    padding: 0;
+  }
+  main .repRevContent .container .singleRepRevContent .repRevConImg {
+    width: 100%;
+    padding: 0;
+  }
+  main .repRevContent .container .singleRepRevContent.singleRepRevContentAlt {
+    flex-direction: column;
+  }
+  main .repRevContent .container .singleRepRevContent.singleRepRevContentAlt .repRevConText {
+    padding: 0;
+  }
+  main .repRevGrow .container {
+    flex-direction: column-reverse;
+  }
+  main .repRevGrow .container .repRevGrowLeft {
+    width: 100%;
+    padding: 0;
+  }
+  main .repRevGrow .container .repRevGrowRight {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 50px;
+  }
+  main .repRevGrow .container .repRevGrowRight img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 500px) {
+  main .repReviewBanner .container .repReviewBannerLeft form input {
+    width: calc(100% - 105px);
+  }
+  main .repReviewBanner .container .repReviewBannerLeft form button {
+    width: 105px;
+    font-size: 12px;
+  }
+  main .repReviewSer .container h2 {
+    font-size: 26px;
+  }
+}
+main .blogBanner {
+  height: fit-content;
+  padding-bottom: 150px;
+  background-color: #002E6E;
+}
+main .blogBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .blogBanner .container .blogBannerText {
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .blogBanner .container .blogBannerText h1 {
+  max-width: 1000px;
+  font-size: 45px;
+  margin-bottom: 10px;
+  line-height: 65px;
+}
+main .blogContent {
+  padding: 60px 0;
+  margin-top: -235px;
+  position: relative;
+}
+main .blogContent .container .blogContentWrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .blogContent .container .blogContentWrap .singleBlogContent {
+  width: 350px;
+  max-height: 515px;
+  overflow: hidden;
+  margin: 20px;
+  border: 1.5px solid rgba(0, 46, 110, 0.096);
+  border-radius: 10px;
+  box-shadow: 1px 1px 16px -6px rgba(0, 0, 0, 0.1882352941);
+}
+main .blogContent .container .blogContentWrap .singleBlogContent img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+main .blogContent .container .blogContentWrap .singleBlogContent .blogText {
+  width: 100%;
+  padding: 15px 10px;
+}
+main .blogContent .container .blogContentWrap .singleBlogContent .blogText h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+main .blogContent .container .blogContentWrap .singleBlogContent .blogText p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 25px;
+}
+main .blogContent .container .blogContentWrap .singleBlogContent .blogText button {
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  background-color: #002E6E;
+  color: #fff;
+}
+main .blogSign {
+  padding: 100px 0;
+  background-color: rgba(224, 221, 235, 0.262745098);
+}
+main .blogSign .container .blogSignWrap {
+  display: flex;
+  align-items: center;
+}
+main .blogSign .container .blogSignWrap .blogSignLeft {
+  width: 50%;
+  padding-right: 50px;
+}
+main .blogSign .container .blogSignWrap .blogSignLeft h2 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+main .blogSign .container .blogSignWrap .blogSignLeft p {
+  font-size: 18px;
+}
+main .blogSign .container .blogSignWrap .blogSignRight {
+  width: 50%;
+  padding-left: 90px;
+}
+main .blogSign .container .blogSignWrap .blogSignRight form {
+  display: flex;
+}
+main .blogSign .container .blogSignWrap .blogSignRight form input {
+  width: calc(100% - 130px);
+  height: 48px;
+  border: 2px solid rgba(0, 46, 110, 0.274);
+  border-right: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0 15px;
+}
+main .blogSign .container .blogSignWrap .blogSignRight form button {
+  width: 130px;
+  height: 48px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  background-color: #4C60F6;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  main .blogBanner .container .blogBannerText h1 {
+    font-size: 35px;
+    line-height: 50px;
+  }
+  main .blogBanner .container .blogBannerText p {
+    line-height: 27px;
+  }
+  main .blogContent .container .blogContentWrap .singleBlogContent {
+    width: 100%;
+  }
+  main .blogSign .container .blogSignWrap {
+    flex-direction: column;
+  }
+  main .blogSign .container .blogSignWrap .blogSignLeft {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  main .blogSign .container .blogSignWrap .blogSignRight {
+    width: 100%;
+    padding: 0;
+  }
+}
+main .assistBanner {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+main .assistBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .assistBanner .container .assistBannerLeft {
+  width: 50%;
+  padding-right: 25px;
+}
+main .assistBanner .container .assistBannerLeft h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+  line-height: 65px;
+}
+main .assistBanner .container .assistBannerLeft p {
+  margin-bottom: 40px;
+}
+main .assistBanner .container .assistBannerRight {
+  width: 50%;
+  padding-left: 20px;
+}
+main .assistBanner .container .assistBannerRight img {
+  width: 100%;
+}
+main .assistSer {
+  padding: 60px 0;
+  padding-top: 20px;
+}
+main .assistSer .container .assistSerHeading {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main .assistSer .container .assistSerHeading h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .assistSer .container .assistSerHeading p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .assistSer .container .assistSerWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .assistSer .container .assistSerWrap .assistSerLeft {
+  width: 45%;
+  padding-right: 30px;
+}
+main .assistSer .container .assistSerWrap .assistSerLeft img {
+  width: 100%;
+  border-radius: 15px;
+}
+main .assistSer .container .assistSerWrap .assistSerRight {
+  width: 50%;
+  padding-left: 10px;
+}
+main .assistSer .container .assistSerWrap .assistSerRight h3 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 45px;
+}
+main .assistSer .container .assistSerWrap .assistSerRight ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  line-height: 25px;
+  font-size: 17px;
+}
+main .assistSer .container .assistSerWrap .assistSerRight ul li span {
+  width: 19px;
+  height: 19px;
+  background-color: #4C60F6;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-right: 15px;
+}
+main .assistSer .container .assistSerWrap .assistSerRight ul li span i {
+  font-size: 9px;
+  color: #fff;
+}
+main .assistSer .container .assistSerWrap .assistSerRight ul li p {
+  width: calc(100% - 34px);
+}
+main .assistCta {
+  padding: 70px 0;
+}
+main .assistCta .container .assistCtaWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 40px;
+  background: linear-gradient(23deg, #002E6E, rgba(0, 69, 143, 0.9));
+  border-radius: 10px;
+}
+main .assistCta .container .assistCtaWrap .assistCtaLeft {
+  width: 55%;
+}
+main .assistCta .container .assistCtaWrap .assistCtaLeft h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #fff;
+}
+main .assistCta .container .assistCtaWrap .assistCtaLeft p {
+  font-size: 17px;
+  line-height: 26px;
+  color: #dbebff;
+}
+main .assistCta .container .assistCtaWrap .assistCtaRight {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+main .assistCta .container .assistCtaWrap .assistCtaRight button {
+  padding: 15px 25px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  border: 1.5px solid #fff;
+  border-radius: 30px;
+}
+
+@media (max-width: 900px) {
+  main .assistBanner .container {
+    flex-direction: column-reverse;
+  }
+  main .assistBanner .container .assistBannerLeft {
+    width: 100%;
+    padding: 0;
+  }
+  main .assistBanner .container .assistBannerRight {
+    width: 520px;
+    max-width: 90%;
+    padding: 0;
+  }
+  main .assistSer .container .assistSerWrap {
+    flex-direction: column;
+  }
+  main .assistSer .container .assistSerWrap .assistSerLeft {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  main .assistSer .container .assistSerWrap .assistSerLeft img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+  main .assistSer .container .assistSerWrap .assistSerRight {
+    padding: 0;
+    width: 100%;
+  }
+  main .assistCta .container .assistCtaWrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main .assistCta .container .assistCtaWrap .assistCtaLeft {
+    width: 100%;
+    margin-bottom: 35px;
+  }
+  main .assistCta .container .assistCtaWrap .assistCtaRight {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  main .assistCta .container .assistCtaWrap .assistCtaRight button {
+    max-width: 100%;
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  main .assistCta .container .assistCtaWrap {
+    padding: 30px 20px;
+  }
+}
+main .linkedBanner {
+  height: fit-content;
+  padding-bottom: 80px;
+}
+main .linkedBanner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+main .linkedBanner .container .linkedBannerLeft {
+  width: 50%;
+  padding-right: 25px;
+}
+main .linkedBanner .container .linkedBannerLeft h1 {
+  font-size: 45px;
+  margin-bottom: 35px;
+  line-height: 65px;
+}
+main .linkedBanner .container .linkedBannerLeft p {
+  margin-bottom: 20px;
+}
+main .linkedBanner .container .linkedBannerLeft button {
+  margin-top: 20px;
+}
+main .linkedBanner .container .linkedBannerRight {
+  width: 50%;
+  padding-left: 20px;
+}
+main .linkedBanner .container .linkedBannerRight img {
+  width: 100%;
+}
+main .linkedFac {
+  padding: 80px 0;
+}
+main .linkedFac .container .linkedFacHeading {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main .linkedFac .container .linkedFacHeading h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .linkedFac .container .linkedFacHeading p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .linkedFac .container .linkedFacWrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .linkedFac .container .linkedFacWrap .singleLinkedFac {
+  width: 240px;
+  height: 300px;
+  border-radius: 15px;
+  padding: 40px 20px;
+  margin: 10px;
+}
+main .linkedFac .container .linkedFacWrap .singleLinkedFac h3 {
+  margin-bottom: 20px;
+}
+main .linkedFac .container .linkedFacWrap .singleLinkedFac p {
+  line-height: 28px;
+}
+main .linkedFac .container .linkedFacWrap .singleLinkedFac:first-child {
+  background-color: #002E6E;
+  color: #fff;
+}
+main .linkedFac .container .linkedFacWrap .singleLinkedFac:nth-child(2) {
+  background-color: rgba(76, 96, 246, 0.3);
+}
+main .linkedFac .container .linkedFacWrap .singleLinkedFac:nth-child(3) {
+  background-color: #4C60F6;
+  color: #fff;
+}
+main .linkedFac .container .linkedFacWrap .singleLinkedFac:last-child {
+  background-color: #2e2d2d;
+  color: #fff;
+  transform: rotate(5deg);
+}
+main .pipeline {
+  padding: 80px 0;
+}
+main .pipeline .container .pipelineHeading {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main .pipeline .container .pipelineHeading h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .pipeline .container .pipelineHeading p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .pipeline .container .pipelineWrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .pipeline .container .pipelineWrap .singlePipeline {
+  width: 290px;
+  height: 390px;
+  border: 1px solid rgba(76, 96, 246, 0.2);
+  border-radius: 15px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+}
+main .pipeline .container .pipelineWrap .singlePipeline .singlePipeText h3 {
+  margin-bottom: 10px;
+}
+main .pipeline .container .pipelineWrap .singlePipeline img {
+  width: 100%;
+  height: calc(100% - 140px);
+  object-fit: contain;
+}
+main .precision {
+  padding: 80px 0;
+}
+main .precision .container .precisionHeading {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main .precision .container .precisionHeading h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .precision .container .precisionHeading p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .precision .container .precisionWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .precision .container .precisionWrap .precisionText {
+  width: 50%;
+  padding-right: 15px;
+}
+main .precision .container .precisionWrap .precisionText h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+main .precision .container .precisionWrap .precisionText p {
+  line-height: 26px;
+}
+main .precision .container .precisionWrap .precisionImg {
+  width: 50%;
+  padding-left: 15px;
+}
+main .precision .container .precisionWrap .precisionImg img {
+  width: 100%;
+}
+main .engage {
+  padding: 80px 0;
+}
+main .engage .container .engageHeading {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main .engage .container .engageHeading h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .engage .container .engageHeading p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .engage .container .engageWrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .engage .container .engageWrap .singleEngage {
+  width: 290px;
+  height: 390px;
+  border: 1px solid rgba(76, 96, 246, 0.2);
+  border-radius: 15px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+}
+main .engage .container .engageWrap .singleEngage .singlePipeText h3 {
+  margin-bottom: 10px;
+}
+main .engage .container .engageWrap .singleEngage img {
+  width: 100%;
+  height: calc(100% - 140px);
+  object-fit: contain;
+}
+main .masterConversion {
+  padding: 80px 0;
+}
+main .masterConversion .container .masterConversionHeading {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main .masterConversion .container .masterConversionHeading h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+main .masterConversion .container .masterConversionHeading p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .masterConversion .container .masterConvWrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .masterConversion .container .masterConvWrap .singleMasterConv {
+  width: 290px;
+  height: 390px;
+  border: 1px solid rgba(76, 96, 246, 0.2);
+  border-radius: 15px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+}
+main .masterConversion .container .masterConvWrap .singleMasterConv .singlePipeText h3 {
+  margin-bottom: 10px;
+}
+main .masterConversion .container .masterConvWrap .singleMasterConv img {
+  width: 100%;
+  height: calc(100% - 140px);
+  object-fit: contain;
+}
+main .readyAccess {
+  padding: 80px 0;
+}
+main .readyAccess .container .readyWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 40px;
+  background: linear-gradient(23deg, #002E6E, rgba(0, 69, 143, 0.9));
+  border-radius: 10px;
+}
+main .readyAccess .container .readyWrap .readyLeft {
+  width: 50%;
+  padding-right: 15px;
+}
+main .readyAccess .container .readyWrap .readyLeft img {
+  width: 100%;
+}
+main .readyAccess .container .readyWrap .readyRight {
+  width: 50%;
+  padding-left: 15px;
+}
+main .readyAccess .container .readyWrap .readyRight h3 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #fff;
+}
+main .readyAccess .container .readyWrap .readyRight p {
+  font-size: 17px;
+  line-height: 26px;
+  color: #dbebff;
+  margin-bottom: 25px;
+}
+main .readyAccess .container .readyWrap .readyRight button {
+  padding: 15px 25px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  border: 1.5px solid #fff;
+  border-radius: 30px;
+}
+
+@media (max-width: 900px) {
+  main .linkedBanner .container {
+    flex-direction: column-reverse;
+  }
+  main .linkedBanner .container .linkedBannerLeft {
+    width: 100%;
+    padding: 0;
+  }
+  main .linkedBanner .container .linkedBannerRight {
+    width: 520px;
+    max-width: 90%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  main .readyAccess .container .readyWrap {
+    flex-direction: column;
+  }
+  main .readyAccess .container .readyWrap .readyLeft {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  main .readyAccess .container .readyWrap .readyRight {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 500px) {
+  main .precision .container .precisionWrap {
+    flex-direction: column-reverse;
+  }
+  main .precision .container .precisionWrap .precisionText {
+    width: 100%;
+    padding: 0;
+  }
+  main .precision .container .precisionWrap .precisionImg {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (max-width: 1250px) {
+  .container {
+    max-width: 900px;
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    max-width: 650px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

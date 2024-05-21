@@ -1,0 +1,271 @@
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: 0px 0px 22px -6px #ccc;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            width: 140px;
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .headerRight {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .overlay {
+                display: none;
+                width: 100vw;
+                height: 100vh;
+                background-color: #0000002b;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 10;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+
+                li {
+                    margin-left: 15px;
+                    position: relative;
+
+                    a {
+                        // color: #f3f4fc;
+                        color: #002E6E;
+                        display: block;
+                        padding: 30px 5px;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+
+                    ul {
+                        width: 300px;
+                        position: absolute;
+                        top: 79px;
+                        left: 0;
+                        background-color: #fff;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: .3s;
+
+                        max-height: calc(95vh - 79px);
+                        overflow-y: auto;
+                        overflow-x: clip;
+                        box-shadow: 0px 6px 11px -1px #ccc;
+
+                        li {
+                            width: 100%;
+                            margin: 0;
+                            position: relative;
+
+                            &.active {
+                                &::after {
+                                    width: calc(100% - 20px);
+                                    height: 2px;
+                                    background-color: #002E6E;
+                                    content: '';
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 10px;
+                                }
+                            }
+
+                            a {
+                                width: 100%;
+                                padding: 20px 10px;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        ul {
+                            opacity: 1;
+                            pointer-events: all;
+                        }
+                    }
+                }
+            }
+
+            button {
+                border: none;
+                outline: none;
+                padding: 13px 20px;
+                background-color: #ff00;
+                border: 1.5px solid #000;
+                // color: #fff;
+                color: #002E6E;
+                font-size: 14px;
+                font-weight: 600;
+                margin-left: 15px;
+                border-radius: 7px;
+
+                // border-bottom-left-radius: 7px;
+                &:last-child {
+                    // border-bottom-left-radius: 0px;
+                    // border-top-right-radius: 7px;
+                    background-color: #4C60F6;
+                    border: 1.5px solid #4C60F6;
+                    color: #fff;
+                }
+
+                br {
+                    display: none;
+                }
+            }
+
+            .fa-bars {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1350px) {
+    header {
+        .container {
+            .headerRight {
+                ul {
+                    li {
+                        margin-left: 8px;
+                    }
+                }
+
+                button {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1250px) {
+    header {
+        padding: 20px 0;
+
+        .container {
+            .headerRight {
+                .overlay {
+                    display: block;
+                    pointer-events: none;
+                    opacity: 0;
+                    transition: .3s;
+
+                    &.active {
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                }
+
+                ul {
+                    width: 280px;
+                    height: 100vh;
+                    background-color: #fff;
+                    position: fixed;
+                    top: 0;
+                    left: -300px;
+                    z-index: 100;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 50px 20px;
+                    transition: .3s;
+
+                    &.active {
+                        left: 0;
+                    }
+
+                    li {
+                        width: 100%;
+                        margin-left: 0;
+                        margin-bottom: 10px;
+
+                        a {
+                            width: 100%;
+                            padding: 10px 15px;
+                        }
+
+                        ul {
+                            width: 300px;
+                            top: 35px;
+                            padding: 30px 20px;
+                        }
+                    }
+                }
+
+                .fa-bars {
+                    display: block;
+                    font-size: 30px;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    header {
+        .container {
+            .logo {
+                width: 90px;
+            }
+
+            .headerRight {
+                button {
+                    padding: 8px;
+                }
+
+                .fa-bars {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width: 650px) {
+    header {
+        .container {
+            .logo {
+                width: 90px;
+            }
+
+            .headerRight {
+                button {
+                    width: 90px;
+                    padding: 6px 0;
+                    font-size: 11px;
+                }
+
+                .fa-bars {
+                    margin-left: 15px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

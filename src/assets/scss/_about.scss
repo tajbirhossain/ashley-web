@@ -1,0 +1,446 @@
+main {
+    .aboutBanner {
+        padding: 60px 0;
+        margin-bottom: 70px;
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+
+            .aboutBannerLeft {
+                width: 50%;
+                padding-right: 20px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .aboutBannerRight {
+                width: 50%;
+                padding-left: 25px;
+
+                h1 {
+                    font-size: 45px;
+                    margin-bottom: 30px;
+                    line-height: 65px;
+                }
+
+                p {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+
+    .mission {
+        padding: 120px 0;
+        background-image: url(../images/abstract-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .container {
+            h2 {
+                font-size: 45px;
+                font-weight: 700;
+                margin-bottom: 10px;
+                margin-bottom: 60px;
+                text-align: center;
+                color: #fff;
+            }
+
+            .missionWrap {
+                display: flex;
+                align-items: center;
+
+                .missionLeft {
+                    width: 50%;
+                    color: #fff;
+                    padding-right: 20px;
+
+                    h3 {
+                        font-size: 35px;
+                        font-weight: 600;
+                        margin-bottom: 30px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 25px;
+                    }
+                }
+
+                .missionRight {
+                    width: 50%;
+                    padding-left: 20px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .vision {
+        padding: 120px 0;
+        // background-image: url(../images/abstract-bg.jpg);
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+
+        .container {
+            h2 {
+                font-size: 45px;
+                font-weight: 700;
+                margin-bottom: 10px;
+                margin-bottom: 60px;
+                text-align: center;
+                // color: #fff;
+            }
+
+            .visionWrap {
+                display: flex;
+                align-items: center;
+
+                .visionLeft {
+                    width: 50%;
+                    padding-right: 20px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .visionRight {
+                    width: 50%;
+                    // color: #fff;
+                    padding-left: 20px;
+
+                    h3 {
+                        font-size: 35px;
+                        font-weight: 600;
+                        margin-bottom: 30px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .comValue {
+        padding: 60px 0;
+        padding-top: 0;
+
+        .container {
+            h2 {
+                font-size: 45px;
+                font-weight: 700;
+                margin-bottom: 10px;
+                margin-bottom: 60px;
+                text-align: center;
+            }
+
+            .comValueWrap {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .singleComValue {
+                    width: calc(100% / 3 - 15px);
+                    height: 300px;
+                    background-color: #fff;
+                    border-radius: 15px;
+                    padding: 25px;
+                    box-shadow: 1px 1px 14px -4px #ccc;
+                    margin-bottom: 30px;
+
+                    img {
+                        width: 45px;
+                        height: 45px;
+                        object-fit: contain;
+                        margin-bottom: 15px;
+                    }
+
+                    h3 {
+                        font-size: 24px;
+                        margin-bottom: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .whyChoose {
+        padding: 60px 0;
+        // background-image: url(../images/dark-bg.svg);
+        background-image: url(../images/gradient-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        .container {
+            h2 {
+                font-size: 45px;
+                font-weight: 700;
+                margin-bottom: 10px;
+                margin-bottom: 60px;
+                text-align: center;
+                color: #fff;
+            }
+
+            .whyChooseWrap {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                .singleWhyChoose {
+                    width: calc(100% / 3 - 15px);
+                    height: 300px;
+                    border-radius: 15px;
+                    color: #d4d4d4;
+                    text-align: center;
+                    padding: 25px;
+
+                    background: rgb(255 255 255 / 9%);
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(5px);
+                    border: 1px solid rgb(255 255 255 / 11%);
+
+                    margin: 7.5px;
+
+                    .whyChooseImg {
+                        width: 55px;
+                        height: 55px;
+                        border-radius: 10px;
+                        margin: 0 auto;
+                        margin-bottom: 15px;
+                        display: grid;
+                        place-items: center;
+                        background: linear-gradient(to right top, #3504c0, #3005c5, #2906c9, #2007ce, #1209d3);
+                        box-shadow: inset -1px 1px 14px -10px #fff;
+
+                        img {
+                            width: 70%;
+                            height: 70%;
+                            object-fit: contain;
+                            filter: invert(1);
+                        }
+                    }
+
+                    h3 {
+                        font-size: 25px;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .aboutDis {
+        padding: 60px 0;
+        background-color: rgba(224, 221, 235, 0.262745098);
+
+        .container {
+            .aboutDisText {
+                width: 100%;
+                max-width: 1000px;
+                text-align: center;
+                margin: 0 auto;
+
+                h2 {
+                    font-size: 40px;
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    margin-bottom: 40px;
+                }
+
+                button {
+                    width: fit-content;
+                    padding: 20px 30px;
+                    border: none;
+                    background-color: #002E6E;
+                    color: #fff;
+                    outline: none;
+                    font-size: 18px;
+                    font-weight: 600;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width: 1250px) {
+    main {
+        .mission {
+            .container {
+                h2 {
+                    font-size: 40px;
+                }
+            }
+        }
+
+        .comValue {
+            .container {
+                h2 {
+                    font-size: 40px;
+                }
+
+                .comValueWrap {
+                    .singleComValue {
+                        width: calc(50% - 15px);
+
+                        h3 {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .whyChoose {
+            .container {
+                h2 {
+                    font-size: 40px;
+                }
+
+                .whyChooseWrap {
+                    .singleWhyChoose {
+                        width: calc(50% - 15px);
+                    }
+                }
+            }
+        }
+
+        .aboutDis {
+            .container {
+                .aboutDisText {
+                    h2 {
+                        font-size: 35px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+
+                    button {
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    main {
+        .aboutBanner {
+            .container {
+                flex-direction: column;
+
+                .aboutBannerLeft {
+                    width: 520px;
+                    max-width: 90%;
+                    padding: 0;
+                }
+
+                .aboutBannerRight {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+        }
+
+        .mission {
+            .container {
+                .missionWrap {
+                    flex-direction: column;
+
+                    .missionLeft {
+                        width: 100%;
+                        padding: 0;
+                        margin-bottom: 40px;
+
+                        h3 {
+                            font-size: 31px;
+                        }
+                    }
+
+                    .missionRight {
+                        width: 100%;
+                        max-width: 520px;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        .comValue {
+            .container {
+                .comValueWrap {
+                    .singleComValue {
+                        width: 100%;
+                        height: fit-content;
+                    }
+                }
+            }
+        }
+
+        .vision {
+            .container {
+                .visionWrap {
+                    flex-direction: column-reverse;
+
+                    .visionLeft {
+                        width: 100%;
+                        max-width: 520px;
+                        padding: 0;
+                    }
+
+                    .visionRight {
+                        width: 100%;
+                        padding: 0;
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+
+        .whyChoose {
+            .container {
+                .whyChooseWrap {
+                    .singleWhyChoose {
+                        width: 100%;
+                        height: fit-content;
+                        margin: 0;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,520 @@
+main {
+    .influencerBanner {
+        height: fit-content;
+        padding-bottom: 80px;
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+
+            .influencerBannerLeft {
+                width: 45%;
+                padding-right: 25px;
+
+                h1 {
+                    font-size: 45px;
+                    margin-bottom: 30px;
+                    line-height: 65px;
+                }
+
+                p {
+                    margin-bottom: 25px;
+                }
+
+                button {
+                    background-color: #002E6E;
+                    padding: 12px 25px;
+                }
+            }
+
+            .influencerBannerRight {
+                width: 55%;
+                padding-left: 20px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .signupExplore {
+        padding: 70px 0;
+
+        .container {
+            .exploreWrapper {
+                padding: 80px 40px;
+                background-color: rgba(76, 96, 246, 0.09);
+                border-radius: 15px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+
+                &::after {
+                    width: 500px;
+                    height: 500px;
+                    border-radius: 50%;
+                    background-color: rgba(76, 96, 246, 0.5);
+                    content: '';
+                    position: absolute;
+                    right: -250px;
+                    bottom: -250px;
+                }
+
+                h2 {
+                    font-size: 55px;
+                    font-weight: 800;
+                    margin-bottom: 40px;
+                    line-height: 70px;
+                    position: relative;
+                    z-index: 1;
+
+                    span {
+                        font-weight: 300;
+
+                        span {
+                            font-weight: 800;
+                            color: #4C60F6;
+                        }
+                    }
+                }
+
+                button {
+                    padding: 15px 55px;
+                    border-radius: 8px;
+                    background-color: #002E6E;
+                    color: #fff;
+                    border: none;
+                    font-size: 20px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+
+    .chooseUs {
+        padding: 80px 0;
+
+        .container {
+            h2 {
+                font-size: 45px;
+                font-weight: 700;
+                text-align: center;
+                margin-bottom: 100px;
+            }
+
+            .chooseWrap {
+                .singleChoose {
+                    display: flex;
+                    align-items: center;
+                    padding: 25px 25px;
+                    margin-bottom: 40px;
+                    border-radius: 10px;
+                    background-color: rgba(76, 96, 246, 0.06);
+
+                    .chooseVid {
+                        width: 53%;
+
+                        .video-js {
+                            width: 100%;
+                            height: 380px;
+                            border-radius: 10px;
+                            box-shadow: 0px 0px 24px 2px #ccc;
+
+                            video {
+                                border-radius: 10px;
+                            }
+                        }
+
+                        img {
+                            width: 100%;
+                            max-height: 500px;
+                            display: block;
+                            margin: 0 auto;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .chooseText {
+                        width: 47%;
+                        padding-left: 45px;
+
+                        h3 {
+                            font-size: 40px;
+                            font-weight: 700;
+                            margin-bottom: 20px;
+
+                            span {
+                                font-weight: 300;
+                            }
+                        }
+
+                        p {
+                            font-size: 17px;
+                            font-weight: 400;
+                            // color: #002E6E;
+                            line-height: 28px;
+                        }
+                    }
+
+                    &.singleChooseAlt {
+                        .chooseText {
+                            padding-left: 0;
+                            padding-right: 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .getStart {
+        padding: 70px 0;
+        padding-top: 0;
+        position: relative;
+
+        .startBlob1 {
+            width: 370px;
+            position: absolute;
+            left: 13px;
+            top: -62px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .startBlob2 {
+            width: 370px;
+            position: absolute;
+            right: 13px;
+            bottom: 0px;
+            pointer-events: none;
+            rotate: -30deg;
+            z-index: -1;
+        }
+
+        .container {
+            h2 {
+                font-size: 45px;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .getStartWrap {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 50px;
+                position: relative;
+                z-index: 1;
+
+                .singleGetStart {
+                    width: 300px;
+                    max-width: 100%;
+
+                    .getStartImg {
+                        width: 100%;
+                        height: 250px;
+
+                        img {
+                            width: 75%;
+                            height: 100%;
+                            object-fit: contain;
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    .getStartText {
+                        width: 100%;
+                        padding: 20px 0;
+
+                        h3 {
+                            font-size: 30px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .buildTeam {
+        padding: 70px 0;
+
+        .container {
+            .buildTeamWrapper {
+                width: 100%;
+                padding: 60px 70px;
+                border-radius: 15px;
+                background-color: rgba(76, 96, 246, 0.09);
+                position: relative;
+                overflow: hidden;
+
+                .teamBlob1 {
+                    width: 300px;
+                    position: absolute;
+                    left: 50px;
+                    bottom: -100px;
+                }
+
+                .teamBlob2 {
+                    width: 500px;
+                    position: absolute;
+                    right: 150px;
+                    top: -140px;
+                }
+
+                .buildTeamContent {
+                    max-width: 75%;
+                    position: relative;
+                    z-index: 1;
+
+                    h2 {
+                        font-size: 40px;
+                        font-weight: 700;
+                        margin-bottom: 20px;
+                    }
+
+                    button {
+                        width: fit-content;
+                        padding: 20px 30px;
+                        border: none;
+                        background-color: #002E6E;
+                        color: #fff;
+                        outline: none;
+                        font-size: 18px;
+                        font-weight: 600;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+@media (max-width: 1250px) {
+    main {
+        .influencerBanner {
+            padding: 70px 0;
+            padding-top: 20px;
+
+            .container {
+                flex-direction: column-reverse;
+
+                .influencerBannerLeft {
+                    width: 100%;
+                    padding: 0;
+
+                    h1 {
+                        font-size: 40px;
+                        line-height: 60px;
+                    }
+                }
+
+                .influencerBannerRight {
+                    width: 520px;
+                    max-width: 90%;
+                    padding: 0;
+                }
+            }
+        }
+
+        .signupExplore {
+            .container {
+                .exploreWrapper {
+                    h2 {
+                        font-size: 50px;
+                    }
+
+                    button {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .chooseUs {
+            .container {
+                h2 {
+                    font-size: 40px;
+                    margin-bottom: 50px;
+                }
+
+                .chooseWrap {
+                    .singleChoose {
+                        .chooseVid {
+                            iframe {
+                                height: 280px;
+                            }
+                        }
+
+                        .chooseText {
+                            h3 {
+                                font-size: 35px;
+                            }
+
+                            p {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .getStart {
+            .container {
+                h2 {
+                    font-size: 40px;
+                }
+            }
+        }
+
+        .buildTeam {
+            .container {
+                .buildTeamWrapper {
+                    .buildTeamContent {
+                        h2 {
+                            font-size: 35px;
+                        }
+
+                        button {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    main {
+        .signupExplore {
+            .container {
+                .exploreWrapper {
+                    padding: 40px 30px;
+
+                    h2 {
+                        font-size: 45px;
+                    }
+                }
+            }
+        }
+
+        .chooseUs {
+            .container {
+                .chooseWrap {
+                    .singleChoose {
+                        flex-direction: column-reverse;
+
+                        &.singleChooseAlt {
+                            flex-direction: column;
+
+                            .chooseText {
+                                width: 100%;
+                                padding: 0;
+                                margin-bottom: 20px;
+                            }
+
+                            .chooseVid {
+                                width: 100%;
+                                padding: 0;
+                            }
+                        }
+
+                        .chooseText {
+                            width: 100%;
+                            padding: 0;
+                            margin-bottom: 20px;
+                        }
+
+                        .chooseVid {
+                            width: 100%;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .getStart {
+            .container {
+                .getStartWrap {
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
+            }
+        }
+
+        .buildTeam {
+            .container {
+                .buildTeamWrapper {
+                    padding: 20px;
+
+                    .buildTeamContent {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 650px) {
+    main {
+        .getStart {
+            .startBlob1 {
+                left: -200px;
+            }
+
+            .startBlob2 {
+                right: -100px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 400px) {
+    main {
+        .signupExplore {
+            .container {
+                .exploreWrapper {
+                    padding: 20px;
+
+                    h2 {
+                        font-size: 40px;
+                        line-height: 50px;
+                    }
+                }
+            }
+        }
+
+        .chooseUs {
+            .container {
+                .chooseWrap {
+                    .singleChoose {
+                        .chooseText {
+                            h3 {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

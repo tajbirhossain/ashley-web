@@ -1,0 +1,509 @@
+main {
+    .strategyBanner {
+        height: fit-content;
+        padding-bottom: 80px;
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .strategyBannerLeft {
+                width: 45%;
+
+                h1 {
+                    font-size: 45px;
+                    margin-bottom: 30px;
+                    line-height: 65px;
+                }
+            }
+
+            .strategyBannerRight {
+                width: 55%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .strategyContents {
+        padding: 70px 0;
+
+        .container {
+            .strategyContentWrap {
+                .singleStrategyContent {
+                    display: flex;
+                    align-items: center;
+                    padding: 25px 25px;
+                    margin-bottom: 40px;
+                    border-radius: 10px;
+                    background-color: rgba(76, 96, 246, 0.06);
+
+                    .strategyContentText {
+                        width: 50%;
+                        padding-right: 20px;
+
+                        h3 {
+                            font-size: 40px;
+                            font-weight: 600;
+                            margin-bottom: 20px;
+                        }
+
+                        p {
+                            font-size: 17px;
+                            font-weight: 400;
+                            line-height: 30px;
+                        }
+                    }
+
+                    .strategyContentImg {
+                        width: 50%;
+                        padding-left: 30px;
+
+                        img {
+                            width: 80%;
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    &.singleStrategyContentAlt {
+                        .strategyContentText {
+                            padding-right: 0;
+                            padding-left: 20px;
+                        }
+
+                        .strategyContentImg {
+                            padding-left: 0;
+                            padding-right: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .strategyChoose {
+        padding: 70px 0;
+
+        .container {
+            h2 {
+                font-size: 45px;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .strategyChooseWrap {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-wrap: wrap;
+                position: relative;
+                z-index: 1;
+
+                .singleStrategyChoose {
+                    width: 300px;
+                    margin: 0 50px;
+
+                    .strategyChooseImg {
+                        width: 100%;
+                        height: 250px;
+
+                        img {
+                            width: 75%;
+                            height: 100%;
+                            object-fit: contain;
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    .strategyChooseText {
+                        width: 100%;
+
+                        // padding: 20px 0;
+                        h3 {
+                            font-size: 25px;
+                            text-align: center;
+                            margin-bottom: 20px;
+                        }
+
+                        p {
+                            font-size: 15px;
+                            line-height: 26px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .strategyBenefit {
+        padding: 70px 0;
+
+        .container {
+            h2 {
+                font-size: 45px;
+                font-weight: 700;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .benefitWrap {
+                .singleBenefit {
+                    display: flex;
+                    align-items: center;
+                    padding: 25px;
+                    margin-bottom: 40px;
+                    border-radius: 10px;
+                    background-color: rgba(76, 96, 246, 0.06);
+
+                    .benefitText {
+                        width: 50%;
+                        padding-right: 20px;
+
+                        h3 {
+                            font-size: 40px;
+                            font-weight: 600;
+                            margin-bottom: 20px;
+                        }
+
+                        ul {
+                            li {
+                                display: flex;
+                                align-items: center;
+                                font-size: 17px;
+                                font-weight: 400;
+                                margin-bottom: 20px;
+
+                                .benefitTick {
+                                    width: 20px;
+                                    height: 20px;
+                                    border-radius: 50%;
+                                    background-color: #4C60F6;
+                                    display: grid;
+                                    place-items: center;
+                                    margin-right: 20px;
+
+                                    i {
+                                        font-size: 10px;
+                                        color: #fff;
+                                    }
+                                }
+
+                                .benefitTextItem {
+                                    width: calc(100% - 40px);
+
+                                    span {
+                                        font-weight: 600;
+                                        color: #002E6E;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .benefitImg {
+                        width: 50%;
+                        padding-left: 30px;
+
+                        img {
+                            width: 100%;
+                            border-radius: 10px;
+                            box-shadow: 0px 0px 24px 2px #ccc;
+                        }
+                    }
+
+                    &.singleBenefitAlt {
+                        .benefitText {
+                            padding-right: 0;
+                            padding-left: 20px;
+                        }
+
+                        .benefitImg {
+                            padding-left: 0;
+                            padding-right: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .strategyTransform {
+        padding: 70px 0;
+
+        .container {
+            .transformWrap {
+                width: 100%;
+                padding: 60px 70px;
+                border-radius: 15px;
+                background-color: rgba(76, 96, 246, 0.09);
+                position: relative;
+                overflow: hidden;
+
+                .stBlob1 {
+                    width: 390px;
+                    position: absolute;
+                    left: 80px;
+                    top: -70px;
+                    opacity: .7;
+                }
+
+                .stBlob2 {
+                    width: 290px;
+                    position: absolute;
+                    right: 180px;
+                    bottom: -10px;
+                    opacity: .3;
+                }
+
+                .transformContent {
+                    width: 75%;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    z-index: 1;
+
+                    h2 {
+                        font-size: 30px;
+                        font-weight: 700;
+                        margin-bottom: 20px;
+                    }
+
+                    button {
+                        width: fit-content;
+                        padding: 20px 30px;
+                        border: none;
+                        background-color: #4C60F6;
+                        color: #fff;
+                        outline: none;
+                        font-size: 18px;
+                        font-weight: 600;
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 1250px) {
+    main {
+        .strategyBanner {
+            padding: 70px 0;
+            padding-top: 20px;
+
+            .container {
+                flex-direction: column-reverse;
+
+                .strategyBannerLeft {
+                    width: 100%;
+
+                    h1 {
+                        font-size: 40px;
+                        line-height: 60px;
+                    }
+                }
+
+                .strategyBannerRight {
+                    width: 520px;
+                    max-width: 90%;
+                }
+            }
+        }
+
+        .strategyContents {
+            .container {
+                .strategyContentWrap {
+                    .singleStrategyContent {
+                        .strategyContentText {
+                            h3 {
+                                font-size: 35px;
+                            }
+
+                            p {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .strategyChoose {
+            .container {
+                h2 {
+                    font-size: 40px;
+                }
+            }
+        }
+
+        .strategyBenefit {
+            .container {
+                h2 {
+                    font-size: 40px;
+                }
+
+                .benefitWrap {
+                    .singleBenefit {
+                        .benefitText {
+                            h3 {
+                                font-size: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .strategyTransform {
+            .container {
+                .transformWrap {
+                    .transformContent {
+                        button {
+                            padding: 15px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width: 900px) {
+    main {
+        .strategyContents {
+            .container {
+                .strategyContentWrap {
+                    .singleStrategyContent {
+                        flex-direction: column;
+
+                        &.singleStrategyContentAlt {
+                            flex-direction: column-reverse;
+
+                            .strategyContentText {
+                                width: 100%;
+                                padding: 0;
+                            }
+
+                            .strategyContentImg {
+                                width: 100%;
+                                padding: 0;
+                            }
+                        }
+
+                        .strategyContentText {
+                            width: 100%;
+                            padding: 0;
+                        }
+
+                        .strategyContentImg {
+                            width: 100%;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .strategyBenefit {
+            .container {
+                .benefitWrap {
+                    .singleBenefit {
+                        flex-direction: column;
+
+                        &.singleBenefitAlt {
+                            flex-direction: column-reverse;
+                            .benefitText {
+                                width: 100%;
+                                padding: 0;
+                            }
+    
+                            .benefitImg {
+                                width: 100%;
+                                padding: 0;
+                            }
+                        }
+
+                        .benefitText {
+                            width: 100%;
+                            padding: 0;
+                        }
+
+                        .benefitImg {
+                            width: 100%;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 650px) {
+    main {
+        .strategyTransform {
+            .container {
+                .transformWrap {
+                    padding: 20px;
+
+                    .transformContent {
+                        width: 100%;
+
+                        h2 {
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 400px) {
+    main {
+        .strategyContents {
+            .container {
+                .strategyContentWrap {
+                    .singleStrategyContent {
+                        .strategyContentText {
+                            h3 {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .strategyBenefit {
+            .container {
+                .benefitWrap {
+                    .singleBenefit {
+                        .benefitText {
+                            h3 {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

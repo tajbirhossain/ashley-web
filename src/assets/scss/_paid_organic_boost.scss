@@ -1,0 +1,427 @@
+main {
+    .boostBanner {
+        height: fit-content;
+        padding-bottom: 80px;
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .boostBannerLeft {
+                width: 55%;
+
+                img {
+                    width: 80%;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+
+            .boostBannerRight {
+                width: 45%;
+
+                h1 {
+                    font-size: 45px;
+                    margin-bottom: 30px;
+                    line-height: 65px;
+                }
+            }
+        }
+    }
+
+    .boostPackage {
+        padding: 60px 0;
+
+        .container {
+            .boostPackageWrap {
+                .singleBoostPackage {
+                    display: flex;
+                    align-items: center;
+                    padding: 25px 25px;
+                    margin-bottom: 40px;
+                    border-radius: 10px;
+                    background-color: rgba(76, 96, 246, 0.06);
+
+                    .boostPackageText {
+                        width: 50%;
+                        padding-right: 20px;
+
+                        h3 {
+                            font-size: 40px;
+                            font-weight: 600;
+                            margin-bottom: 20px;
+                        }
+
+                        p {
+                            font-size: 17px;
+                            font-weight: 400;
+                            line-height: 30px;
+                        }
+                    }
+
+                    .boostPackageImg {
+                        width: 50%;
+                        padding-left: 30px;
+
+                        img {
+                            width: 80%;
+                            display: block;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    &.singleBoostPackageAlt {
+                        .boostPackageImg {
+                            padding-left: 0;
+                            padding-right: 30px;
+                        }
+
+                        .boostPackageText {
+                            padding-right: 0;
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .boostOffer {
+        padding: 60px 0;
+
+        .container {
+            .boostOfferWrap {
+                display: flex;
+                align-items: center;
+
+                .boostOfferLeft {
+                    width: 40%;
+
+                    h2 {
+                        font-size: 30px;
+                        font-weight: 500;
+
+                        span {
+                            color: #4C60F6;
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                .boostOfferRight {
+                    width: 60%;
+                    padding-left: 50px;
+
+                    .boostOfferRightContent {
+                        width: 100%;
+                        padding: 25px;
+                        border-radius: 10px;
+                        background-color: rgba(76, 96, 246, 0.06);
+                        box-shadow: 0px 0px 24px 2px #ccc;
+
+                        iframe {
+                            width: 100%;
+                            height: 400px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .boostForm {
+        padding: 70px 0;
+
+        .container {
+            .boostFormContent {
+                display: flex;
+                align-items: center;
+                border-radius: 10px;
+                background-color: rgba(76, 96, 246, 0.06);
+                padding: 40px 30px;
+                position: relative;
+                overflow: hidden;
+
+                &::before {
+                    width: 600px;
+                    height: 600px;
+                    border-radius: 50%;
+                    border: 150px solid rgba(76, 96, 246, 0.05);
+                    content: '';
+                    position: absolute;
+                    left: -420px;
+                    top: -420px;
+                    z-index: -1;
+                }
+
+                .boostFormLeft {
+                    width: 50%;
+                    padding-right: 25px;
+
+                    h2 {
+                        font-size: 28px;
+                        font-weight: 600;
+                        margin-bottom: 40px;
+                    }
+
+                    ul {
+                        li {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 25px;
+
+                            span:first-child {
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                background-color: #4C60F6;
+                                display: grid;
+                                place-items: center;
+                                margin-right: 10px;
+
+                                i {
+                                    font-size: 10px;
+                                    color: #fff;
+                                }
+                            }
+                            span:last-child {
+                                width: calc(100% - 30px);
+                            }
+                        }
+                    }
+                }
+
+                form {
+                    width: 50%;
+                    background-color: #fff;
+                    box-shadow: 0px 0px 26px -14px #ccc;
+                    border-radius: 10px;
+                    padding: 20px;
+
+                    .boostFormInp {
+                        width: 100%;
+                        margin-bottom: 25px;
+
+                        label {
+                            font-size: 13px;
+                            font-weight: 500;
+                            color: #666666;
+                            display: block;
+                            margin-bottom: 4px;
+
+                            span {
+                                color: red;
+                            }
+                        }
+
+                        input,
+                        select {
+                            width: 100%;
+                            height: 40px;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            background-color: #fff;
+                            font-size: 15px;
+                            padding: 0 10px;
+                        }
+                    }
+
+                    .boostFormBtn {
+                        padding: 15px 25px;
+                        background-color: #4C60F6;
+                        border: none;
+                        border-radius: 8px;
+                        color: #fff;
+                        font-size: 18px;
+                        font-weight: 500;
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1250px) {
+    main {
+        .boostBanner {
+            padding: 70px 0;
+            padding-top: 20px;
+
+            .container {
+                flex-direction: column;
+
+                .boostBannerLeft {
+                    width: 520px;
+                    max-width: 90%;
+                    padding: 0;
+                }
+
+                .boostBannerRight {
+                    width: 100%;
+                    padding: 0;
+
+                    h1 {
+                        font-size: 40px;
+                        line-height: 60px;
+                    }
+                }
+            }
+        }
+
+        .boostPackage {
+            .container {
+                .boostPackageWrap {
+                    .singleBoostPackage {
+                        .boostPackageText {
+                            h3 {
+                                font-size: 35px;
+                            }
+
+                            p {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media (max-width: 900px) {
+    main {
+        .boostPackage {
+            .container {
+                .boostPackageWrap {
+                    .singleBoostPackage {
+                        flex-direction: column;
+
+                        &.singleBoostPackageAlt {
+                            flex-direction: column-reverse;
+
+                            .boostPackageText {
+                                width: 100%;
+                                padding: 0;
+                            }
+
+                            .boostPackageImg {
+                                width: 100%;
+                                padding: 0;
+                            }
+                        }
+
+                        .boostPackageText {
+                            width: 100%;
+                            padding: 0;
+                        }
+
+                        .boostPackageImg {
+                            width: 100%;
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .boostOffer {
+            .container {
+                .boostOfferWrap {
+                    flex-direction: column;
+
+                    .boostOfferLeft {
+                        width: 100%;
+                        padding: 0;
+                        margin-bottom: 30px;
+                    }
+
+                    .boostOfferRight {
+                        width: 100%;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        .boostForm {
+            .container {
+                .boostFormContent {
+                    flex-direction: column;
+
+                    .boostFormLeft {
+                        width: 100%;
+                        padding: 0;
+                        margin-bottom: 30px;
+                    }
+
+                    form {
+                        width: 100%;
+
+                        .boostFormBtn {
+                            padding: 15px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 650px) {
+    main {
+        .boostOffer {
+            .container {
+                .boostOfferWrap {
+                    .boostOfferLeft {
+                        h2 {
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 400px) {
+    main {
+        .boostPackage {
+            .container {
+                .boostPackageWrap {
+                    .singleBoostPackage {
+                        .boostPackageText {
+                            h3 {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .boostOffer {
+            .container {
+                .boostOfferWrap {
+                    .boostOfferRight {
+                        .boostOfferRightContent {
+                            iframe {
+                                height: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

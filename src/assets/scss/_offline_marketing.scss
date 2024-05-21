@@ -1,0 +1,260 @@
+main {
+    .offlineBanner {
+        height: fit-content;
+        padding-bottom: 80px;
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+
+            .offlineBannerLeft {
+                width: 55%;
+                padding-right: 20px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .offlineBannerRight {
+                width: 45%;
+                padding-left: 25px;
+
+                h1 {
+                    font-size: 45px;
+                    margin-bottom: 30px;
+                    line-height: 65px;
+                }
+
+                p {
+                    margin-bottom: 25px;
+                }
+
+                button {
+                    background-color: #002E6E;
+                    padding: 12px 25px;
+                }
+            }
+        }
+    }
+
+    .offlineMar {
+        padding: 70px 0;
+
+        .container {
+            h2 {
+                width: 100%;
+                max-width: 900px;
+                font-size: 45px;
+                font-weight: 700;
+                text-align: center;
+                margin: 0 auto;
+                margin-bottom: 60px;
+            }
+
+            .singleOfflineMar {
+                display: flex;
+                align-items: center;
+                padding: 25px 25px;
+                margin-bottom: 40px;
+                border-radius: 10px;
+                background-color: rgba(76, 96, 246, 0.06);
+
+                .offlineMarText {
+                    width: 50%;
+                    padding-right: 20px;
+
+                    h3 {
+                        font-size: 40px;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        font-size: 17px;
+                        font-weight: 400;
+                        line-height: 30px;
+                    }
+                }
+
+                .offlineMarImg {
+                    width: 50%;
+                    padding-left: 25px;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                &.singleOfflineMarAlt {
+                    .offlineMarText {
+                        padding-right: 0;
+                        padding-left: 20px;
+                    }
+
+                    .offlineMarImg {
+                        padding-left: 0;
+                        padding-right: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .offlineDis {
+        padding: 60px 0;
+        background-color: rgba(224, 221, 235, 0.262745098);
+        margin-bottom: 80px;
+
+        .container {
+            .offDisText {
+                width: 100%;
+                max-width: 1000px;
+                text-align: center;
+                margin: 0 auto;
+
+                h2 {
+                    font-size: 40px;
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 17px;
+                    font-weight: 400;
+                    line-height: 30px;
+                    margin-bottom: 40px;
+                }
+
+                button {
+                    width: fit-content;
+                    padding: 20px 30px;
+                    border: none;
+                    background-color: #002E6E;
+                    color: #fff;
+                    outline: none;
+                    font-size: 18px;
+                    font-weight: 600;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1250px) {
+    main {
+        .offlineBanner {
+            padding: 70px 0;
+            padding-top: 20px;
+
+            .container {
+                flex-direction: column;
+
+                .offlineBannerLeft {
+                    width: 520px;
+                    padding-right: 0;
+
+                    h1 {
+                        font-size: 40px;
+                        line-height: 60px;
+                    }
+
+                    button {
+                        padding: 15px;
+                    }
+                }
+
+                .offlineBannerRight {
+                    width: 100%;
+                    max-width: 90%;
+                    padding-left: 0;
+                }
+            }
+        }
+
+        .offlineMar {
+            .container {
+                h2 {
+                    font-size: 40px;
+                    margin-bottom: 50px;
+                }
+
+                .singleOfflineMar {
+                    .offlineMarText {
+                        h3 {
+                            font-size: 35px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .offlineDis {
+            .container {
+                .offDisText {
+                    h2 {
+                        font-size: 35px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+
+                    button {
+                        padding: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media (max-width: 900px) {
+    main {
+        .offlineMar {
+            .container {
+                .singleOfflineMar {
+                    flex-direction: column-reverse;
+
+                    .offlineMarText {
+                        width: 100%;
+                        padding-right: 0;
+                    }
+
+                    .offlineMarImg {
+                        width: 100%;
+                        padding-left: 0;
+                    }
+
+                    &.singleOfflineMarAlt {
+                        flex-direction: column;
+
+                        .offlineMarText {
+                            padding-left: 0;
+                        }
+
+                        .offlineMarImg {
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
