@@ -4781,6 +4781,52 @@ main .assistCta .container .assistCtaWrap .assistCtaRight button {
   border: 1.5px solid #fff;
   border-radius: 30px;
 }
+main .assistLearn {
+  padding: 80px 0;
+}
+main .assistLearn .container h2 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  text-align: center;
+}
+main .assistLearn .container form {
+  width: 100%;
+  padding: 35px 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px -1px #ccc;
+}
+main .assistLearn .container form .assistInpRow {
+  display: flex;
+  justify-content: space-between;
+}
+main .assistLearn .container form .assistInpRow .assistInp {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+main .assistLearn .container form .assistInpRow .assistInp label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #666666;
+}
+main .assistLearn .container form .assistInpRow .assistInp input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #ccc;
+}
+main .assistLearn .container form button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 35px;
+  padding: 15px 35px;
+  background-color: #4C60F6;
+  color: #fff;
+  font-size: 17px;
+  border: none;
+  border-radius: 8px;
+}
 
 @media (max-width: 900px) {
   main .assistBanner .container {
@@ -4832,6 +4878,15 @@ main .assistCta .container .assistCtaWrap .assistCtaRight button {
   main .assistCta .container .assistCtaWrap {
     padding: 30px 20px;
   }
+  main .assistLearn .container form {
+    padding: 20px;
+  }
+  main .assistLearn .container form .assistInpRow {
+    flex-direction: column;
+  }
+  main .assistLearn .container form .assistInpRow .assistInp {
+    width: 100%;
+  }
 }
 main .linkedBanner {
   height: fit-content;
@@ -4879,6 +4934,7 @@ main .linkedFac .container .linkedFacHeading h2 {
   font-size: 45px;
   font-weight: 700;
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 main .linkedFac .container .linkedFacHeading p {
   font-size: 17px;
@@ -4933,6 +4989,7 @@ main .pipeline .container .pipelineHeading h2 {
   font-size: 45px;
   font-weight: 700;
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 main .pipeline .container .pipelineHeading p {
   font-size: 17px;
@@ -4954,9 +5011,11 @@ main .pipeline .container .pipelineWrap .singlePipeline {
   flex-direction: column;
   justify-content: space-between;
   margin: 10px;
+  text-align: center;
 }
 main .pipeline .container .pipelineWrap .singlePipeline .singlePipeText h3 {
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 main .pipeline .container .pipelineWrap .singlePipeline img {
   width: 100%;
@@ -4977,6 +5036,7 @@ main .precision .container .precisionHeading h2 {
   font-size: 45px;
   font-weight: 700;
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 main .precision .container .precisionHeading p {
   font-size: 17px;
@@ -4995,6 +5055,7 @@ main .precision .container .precisionWrap .precisionText {
 main .precision .container .precisionWrap .precisionText h3 {
   font-size: 28px;
   margin-bottom: 15px;
+  text-transform: capitalize;
 }
 main .precision .container .precisionWrap .precisionText p {
   line-height: 26px;
@@ -5020,6 +5081,7 @@ main .engage .container .engageHeading h2 {
   font-size: 45px;
   font-weight: 700;
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 main .engage .container .engageHeading p {
   font-size: 17px;
@@ -5041,9 +5103,11 @@ main .engage .container .engageWrap .singleEngage {
   flex-direction: column;
   justify-content: space-between;
   margin: 10px;
+  text-align: center;
 }
 main .engage .container .engageWrap .singleEngage .singlePipeText h3 {
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 main .engage .container .engageWrap .singleEngage img {
   width: 100%;
@@ -5064,6 +5128,7 @@ main .masterConversion .container .masterConversionHeading h2 {
   font-size: 45px;
   font-weight: 700;
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 main .masterConversion .container .masterConversionHeading p {
   font-size: 17px;
@@ -5085,9 +5150,11 @@ main .masterConversion .container .masterConvWrap .singleMasterConv {
   flex-direction: column;
   justify-content: space-between;
   margin: 10px;
+  text-align: center;
 }
 main .masterConversion .container .masterConvWrap .singleMasterConv .singlePipeText h3 {
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 main .masterConversion .container .masterConvWrap .singleMasterConv img {
   width: 100%;
@@ -5120,6 +5187,7 @@ main .readyAccess .container .readyWrap .readyRight h3 {
   font-size: 30px;
   margin-bottom: 25px;
   color: #fff;
+  text-transform: capitalize;
 }
 main .readyAccess .container .readyWrap .readyRight p {
   font-size: 17px;
