@@ -4789,6 +4789,7 @@ main .assistLearn .container h2 {
   font-weight: 700;
   margin-bottom: 60px;
   text-align: center;
+  text-transform: capitalize;
 }
 main .assistLearn .container form {
   width: 100%;
